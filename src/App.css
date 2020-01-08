@@ -46,13 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*===============================================================*/
-
-
 
 
 /*===========Carte component=============*/
-
 
 .carte h2 {
     margin: 0.5rem;
@@ -71,35 +67,33 @@ table {
     text-transform: uppercase;
     color: goldenrod;
     text-align: center;
-    border-bottom: 2px solid grey;
-    width: 13rem;
+    border-bottom: 2px solid goldenrod;;
+    width: 17rem;
     margin: 2rem auto;
-  
 }
 .carte figure {
-    width: 11rem;
-    margin: 0 auto;
-    text-align: center;
-    border-bottom: 1px dashed black;
- 
+    width: 16rem;
+    margin: 0 auto 1rem auto;
+    /* border-bottom: 1px dashed black; */
+    box-shadow: 2px 3px 2px  rgb(236, 233, 233);
+}
+.carte p{
+    margin: 0 0 0.5rem 0.5rem;
+    color:rgb(246, 197, 106);
+}
+.carte span, figcaption {
+    display: block;
+    margin: 0 0 0.5rem 0.5rem;
+}
+.carte button {
+    display: block;
+    margin: 0 auto 0.5rem auto; 
 }
 .carte img {
-    height: 7rem;
-    width: 11rem;
+    
+    width: 16rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*===========Footer component=============*/
 
 footer {
     margin: 1rem auto;
@@ -122,7 +116,34 @@ footer li:last-of-type {
 footer p {
     margin: 0.5rem auto;
 }
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 600px) {
+
+    .flexProduit {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .carte figure {
+        width: 20rem;
+        margin: 0 auto 1rem auto;
+        box-shadow: 2px 3px 2px  rgb(236, 233, 233);
+    }
+    .carte h3 {
+        width: 70%;
+    }
+    .carte img {
+        height: 15rem;
+        width: 20rem;
+    }
     footer ul {
         display: flex;
         flex-direction: row;
@@ -131,7 +152,6 @@ footer p {
     }
     footer li {
         border-bottom: none;
-
     }
 }
 

@@ -7,7 +7,7 @@ export default class Footer extends Component {
                 <ul>
                     <li>
                         <div className='logo'>
-                            <a href='#'><img src='' alt='' /></a>
+                            <a href='hotmail.com'><img src='' alt='' /></a>
                         </div>
                         <p>A propos</p>
                         <p>CGV</p>
