@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+/* ....... */
+
 html,
 body,
 div,
@@ -132,15 +134,13 @@ table {
 /* ====================================================== */
 /* first Mobile */
 
-
- /* COMPONENT HEADER */
+/* COMPONENT HEADER */
 body {
   /* background: rgb(212, 212, 212); */
 }
-.toolbar_nav-items{
+.toolbar_nav-items {
   /* display:none; */
 }
-
 
 .toolbar {
   /* position: 0;
@@ -156,7 +156,6 @@ body {
   width: 180px;
   height: 50px;
   text-align: center;
-  
 }
 
 .toolbar_logo a {
@@ -167,10 +166,8 @@ body {
 }
 
 .toolbar_navigation {
-
-display:flex;
-padding: 8% 0 0 0;
-
+  display: flex;
+  padding: 8% 0 0 0;
 }
 
 .espace {
@@ -179,49 +176,42 @@ padding: 8% 0 0 0;
 
 /* SIDEBAR  Mobile  */
 
-.toolbar_nav-aside{
-  position: fixed; 
-  background:rgb(194, 174, 174);
+.toolbar_nav-aside {
+  position: fixed;
+  background: rgb(194, 174, 174);
 
-
-   /* ICI JE FIXE MA BAR DE MENU */
-  top:80px;
+  /* ICI JE FIXE MA BAR DE MENU */
+  top: 80px;
 
   width: 0;
-  width:100%;
+  width: 100%;
 
   /* height: 30vh; */
-  height: calc(31.3vh - 10px) ;
+  height: calc(31.3vh - 10px);
   transition: all 0 0.3s ease-in-out;
 
-  z-index:1000;
+  z-index: 1000;
 
   font-size: 1.5rem;
 }
 
-
-.toolbar_nav-aside ul{
-  padding-top:8% ;
-
-  
- 
+.toolbar_nav-aside ul {
+  padding-top: 8%;
 }
 
-.toolbar_nav-aside ul li{
-  opacity: .5;
+.toolbar_nav-aside ul li {
+  opacity: 0.5;
   font-family: arial;
   color: black;
-  cursor:pointer;
+  cursor: pointer;
   line-height: 2.5;
   text-align: center;
-
 }
-.toolbar_nav-aside ul li:hover{
-  opacity: .7;
+.toolbar_nav-aside ul li:hover {
+  opacity: 0.7;
 }
 
-.toolbar_nav-items{
-
+.toolbar_nav-items {
 }
 
 /* toolbar_nav-items ul cachée sera présente que sur Le desktop */
@@ -233,8 +223,8 @@ padding: 8% 0 0 0;
   height: 15vh;
   width: 100%;
   padding: 5% 0 0 0;
- 
-  display:none;
+
+  display: none;
 }
 
 .toolbar_nav-items a {
@@ -260,42 +250,41 @@ padding: 8% 0 0 0;
   position: absolute;
   top: 5rem;
   /* border: 4px solid black ; */
-  width:100%;
+  width: 100%;
   min-height: 40vh;
   display: flex;
   flex-direction: column;
 }
-.bg-image{
-
+.bg-image {
   height: 30vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bg-image img{
-  width:376px;
+.bg-image img {
+  width: 376px;
   height: 244px;
-   z-index:0; /*============= */
+  z-index: 0; /*============= */
 }
-.bg-image h2{
-  position:absolute;
-  z-index:1;/*============= */
+.bg-image h2 {
+  position: absolute;
+  z-index: 1; /*============= */
   font-size: 2rem;
-  color:whitesmoke;
- /* text-shadow: black  ; */
+  color: whitesmoke;
+  /* text-shadow: black  ; */
 
- text-shadow: 1px 1px 5px black;
- letter-spacing: .7rem;
+  text-shadow: 1px 1px 5px black;
+  letter-spacing: 0.7rem;
 }
 
-.control-horaires{
-display: flex;
-justify-content: space-around;
-padding: 2% 0 2% 0;
+.control-horaires {
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0 2% 0;
 }
 
-.btn-control{
+.btn-control {
   width: 50vw;
   height: 30vh;
   /* font-size: ; */
@@ -304,49 +293,44 @@ padding: 2% 0 2% 0;
   cursor: pointer;
 }
 
-p{
+p {
   margin: 15% 0 0 0;
 }
 
 p:hover {
-  border: black solid .5px;
+  border: black solid 0.5px;
 }
 
 /* COMPOSANT EVENEMENT */
-.evenement{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+.evenement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.header-event{
+.header-event {
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
-
 }
 
-.evenement h2{
+.evenement h2 {
   text-align: center;
   border: 1px solid black;
   padding: 15%;
 }
 
-.container-mignardise,.container-repas,.container-gourmandise{
-  border: black .5px solid;
-
-  
+.container-mignardise,
+.container-repas,
+.container-gourmandise {
+  border: black 0.5px solid;
 }
 
 .evenement ul {
-  display:none;
+  display: none;
 }
-
-
-
-
 
 /* //lorsque la largeur dépasse les 6OOpx    */
 @media only screen and (min-width: 600px) {
@@ -399,109 +383,100 @@ justify-content: space-around;
     width: 100%;
     padding: 0 0 0 0;
     visibility: visible;
-
-
   }
 
   .toolbar_nav-items li {
     border-bottom: solid 0.2px;
   }
 
-  
-/* COMPOSANT PAGEACCUEIL */
+  /* COMPOSANT PAGEACCUEIL */
 
   .landing-page {
     position: absolute;
     top: 15%;
- 
   }
 
-  .bg-image{
+  .bg-image {
     height: 85vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     /* border:2px solid black; */
     background-color: cadetblue;
   }
 
-  .bg-image img{
+  .bg-image img {
     padding: 2% 0 2% 0;
-    width:75%;
+    width: 75%;
     height: 85vh;
   }
 
-  .bg-image h2{
-    
+  .bg-image h2 {
     font-size: 4rem;
-   text-shadow: 1px 1px 5px black;
-   letter-spacing: .7rem; 
-  }
-  
-
-  .control-horaires{
-  margin: 1% 0 1% 0 ;
-    }
-
-  .users-command{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-
+    text-shadow: 1px 1px 5px black;
+    letter-spacing: 0.7rem;
   }
 
-  .btn-control{
-    width:40vw;
+  .control-horaires {
+    margin: 1% 0 1% 0;
+  }
+
+  .users-command {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .btn-control {
+    width: 40vw;
     height: 50vh;
   }
 
   /* SIDEBAR  Mobile  */
 
-  .toolbar_nav-aside{
-    display:none;
+  .toolbar_nav-aside {
+    display: none;
   }
-
 
   /* COMPOSANT EVENEMENT */
-  .header-event{
-margin-bottom: 5%;
-border: tomato 1px solid;
+  .header-event {
+    margin-bottom: 5%;
+    border: tomato 1px solid;
   }
 
-  .evenement h2{
+  .evenement h2 {
     text-align: center;
     border: 1px solid black;
     padding: 5%;
   }
 
   .evenement ul {
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 2%;
   }
-  
-  .container-mignardise,.container-repas,.container-gourmandise{
 
+  .container-mignardise,
+  .container-repas,
+  .container-gourmandise {
     width: 40%;
   }
 
-  .container-mignardise{
+  .container-mignardise {
     position: relative;
-  left:5%;
-  border:yellow 1px solid;
-
+    left: 5%;
+    border: yellow 1px solid;
   }
 
-  .container-repas{
+  .container-repas {
     position: relative;
-  left:55%;
-  border: blue 1px solid;
-
+    left: 55%;
+    border: blue 1px solid;
   }
-  .container-gourmandise{
-  position: relative;
-  left:5%;
-  border: red 1px solid;
+
+  .container-gourmandise {
+    position: relative;
+    left: 5%;
+    border: red 1px solid;
   }
 }
