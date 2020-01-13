@@ -1,0 +1,507 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  /* background-color: grey; */
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ====================================================== */
+/* first Mobile */
+
+
+ /* COMPONENT HEADER */
+body {
+  /* background: rgb(212, 212, 212); */
+}
+.toolbar_nav-items{
+  /* display:none; */
+}
+
+
+.toolbar {
+  /* position: 0;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  /* height: 5vh; */
+
+  /* background: grey; */
+}
+
+.toolbar_logo {
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  
+}
+
+.toolbar_logo a {
+  color: black;
+  font-size: 1.5rem;
+
+  /* text-decoration: none; */
+}
+
+.toolbar_navigation {
+
+display:flex;
+padding: 8% 0 0 0;
+
+}
+
+.espace {
+  /* flex: 1; */
+}
+
+/* SIDEBAR  Mobile  */
+
+.toolbar_nav-aside{
+  position: fixed; 
+  background:rgb(194, 174, 174);
+
+
+   /* ICI JE FIXE MA BAR DE MENU */
+  top:80px;
+
+  width: 0;
+  width:100%;
+
+  /* height: 30vh; */
+  height: calc(31.3vh - 10px) ;
+  transition: all 0 0.3s ease-in-out;
+
+  z-index:1000;
+
+  font-size: 1.5rem;
+}
+
+
+.toolbar_nav-aside ul{
+  padding-top:8% ;
+
+  
+ 
+}
+
+.toolbar_nav-aside ul li{
+  opacity: .5;
+  font-family: arial;
+  color: black;
+  cursor:pointer;
+  line-height: 2.5;
+  text-align: center;
+
+}
+.toolbar_nav-aside ul li:hover{
+  opacity: .7;
+}
+
+.toolbar_nav-items{
+
+}
+
+/* toolbar_nav-items ul cachée sera présente que sur Le desktop */
+.toolbar_nav-items ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 15vh;
+  width: 100%;
+  padding: 5% 0 0 0;
+ 
+  display:none;
+}
+
+.toolbar_nav-items a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+}
+
+.toolbar_nav-items li {
+  border-spacing: 0.5%; /*espace entre élement*/
+  text-align: center;
+}
+
+.toolbar_nav-items a:hover,
+.toolbar_nav-items a:active {
+  color: orange;
+}
+
+/* COMPOSANT PAGEACCUEIL */
+
+.landing-page {
+  position: absolute;
+  top: 5rem;
+  /* border: 4px solid black ; */
+  width:100%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.bg-image{
+
+  height: 30vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image img{
+  width:376px;
+  height: 244px;
+   z-index:0; /*============= */
+}
+.bg-image h2{
+  position:absolute;
+  z-index:1;/*============= */
+  font-size: 2rem;
+  color:whitesmoke;
+ /* text-shadow: black  ; */
+
+ text-shadow: 1px 1px 5px black;
+ letter-spacing: .7rem;
+}
+
+.control-horaires{
+display: flex;
+justify-content: space-around;
+padding: 2% 0 2% 0;
+}
+
+.btn-control{
+  width: 50vw;
+  height: 30vh;
+  /* font-size: ; */
+  font-weight: bolder;
+  /* border: none; */
+  cursor: pointer;
+}
+
+p{
+  margin: 15% 0 0 0;
+}
+
+p:hover {
+  border: black solid .5px;
+}
+
+/* COMPOSANT EVENEMENT */
+.evenement{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.header-event{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+
+}
+
+.evenement h2{
+  text-align: center;
+  border: 1px solid black;
+  padding: 15%;
+}
+
+.container-mignardise,.container-repas,.container-gourmandise{
+  border: black .5px solid;
+
+  
+}
+
+.evenement ul {
+  display:none;
+}
+
+
+
+
+
+/* //lorsque la largeur dépasse les 6OOpx    */
+@media only screen and (min-width: 600px) {
+  body {
+    /* display: flex;
+    flex-direction:row; */
+  }
+
+  .toolbar {
+    position: relative;
+    height: 5vh;
+    padding: 0% 0% 5% 0;
+    /* border:red 4px solid; */
+    border-bottom: solid 0.2px;
+  }
+
+  .toolbar_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: blue solid 4px; */
+    padding: 3% 0% 1% 0;
+  }
+
+  .toolbar_logo {
+    width: 40%;
+    text-align: center;
+  }
+
+  .toolbar_nav-items {
+    width: 20vw;
+    height: 5vh;
+    /* border: yellow 4px solid; */
+  }
+
+  .toolbar_nav-items {
+    width: 100%;
+    height: 0vh;
+    /* border: yellow 4px solid; */
+  }
+
+  .toolbar_nav-items ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* border: steelblue 4px solid ; */
+    height: 0vh;
+    width: 100%;
+    padding: 0 0 0 0;
+    visibility: visible;
+
+
+  }
+
+  .toolbar_nav-items li {
+    border-bottom: solid 0.2px;
+  }
+
+  
+/* COMPOSANT PAGEACCUEIL */
+
+  .landing-page {
+    position: absolute;
+    top: 15%;
+ 
+  }
+
+  .bg-image{
+    height: 85vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid black; */
+    background-color: cadetblue;
+  }
+
+  .bg-image img{
+    padding: 2% 0 2% 0;
+    width:75%;
+    height: 85vh;
+  }
+
+  .bg-image h2{
+    
+    font-size: 4rem;
+   text-shadow: 1px 1px 5px black;
+   letter-spacing: .7rem; 
+  }
+  
+
+  .control-horaires{
+  margin: 1% 0 1% 0 ;
+    }
+
+  .users-command{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+  }
+
+  .btn-control{
+    width:40vw;
+    height: 50vh;
+  }
+
+  /* SIDEBAR  Mobile  */
+
+  .toolbar_nav-aside{
+    display:none;
+  }
+
+
+  /* COMPOSANT EVENEMENT */
+  .header-event{
+margin-bottom: 5%;
+border: tomato 1px solid;
+  }
+
+  .evenement h2{
+    text-align: center;
+    border: 1px solid black;
+    padding: 5%;
+  }
+
+  .evenement ul {
+    display:flex;
+    flex-direction: column;
+    padding: 2%;
+  }
+  
+  .container-mignardise,.container-repas,.container-gourmandise{
+
+    width: 40%;
+  }
+
+  .container-mignardise{
+    position: relative;
+  left:5%;
+  border:yellow 1px solid;
+
+  }
+
+  .container-repas{
+    position: relative;
+  left:55%;
+  border: blue 1px solid;
+
+  }
+  .container-gourmandise{
+  position: relative;
+  left:5%;
+  border: red 1px solid;
+  }
+}
