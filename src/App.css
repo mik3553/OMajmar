@@ -48,6 +48,20 @@ table {
 }
 
 
+
+
+/*==========générale=============*/
+.alert {
+    font-size: 0.7em;
+    color:orange;
+    margin-top: -0.4rem;
+}
+.green {
+    font-size: 0.7em;
+    color: green;
+    margin-top: -0.4rem;
+}
+
 /*===========Carte component=============*/
 
 .carte h2 {
@@ -93,6 +107,64 @@ table {
     
     width: 16rem;
 }
+/*===========LogPage component=============*/
+/* .logpage {
+    background-color: #F2C078 ;
+} */
+.logButton {
+    margin: 0 2rem; 
+}
+.logButton button {
+    width: 50%;
+    /* margin-top: rem; */
+    background-color:white ;
+    border: 1px solid orange;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+}
+.logButton button:last-of-type{
+    border-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; 
+}
+.logButton button:hover {
+    background-color: orange;
+}
+.logButton button:focus{
+    background-color: orange;
+}
+.logpage h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: orange;
+    text-align: center;
+    margin-top: 1rem;
+}
+.logpage label {
+    display: none;
+}
+.logpage input {
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: rgb(63, 62, 61) 1px solid;
+}
+.logpage input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 1px solid orange;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+.logpage input[type='submit']:hover {
+    background-color: orange;
+}
+.logpage form {
+    margin: 1rem 2rem;
+}
+
+
 /*===========Footer component=============*/
 
 footer {
@@ -126,8 +198,11 @@ footer p {
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
+    .alert {
 
+        margin-bottom: 0.5rem;
+    }
     .flexProduit {
         display: flex;
         justify-content: space-evenly;
@@ -143,6 +218,45 @@ footer p {
     .carte img {
         height: 15rem;
         width: 20rem;
+    }
+
+
+
+    .logpage .logButton {
+        width: 20rem;
+        margin: 1rem auto; 
+    }
+    .logpage .logButton button {
+        margin-top: 15rem;
+        width: 9.5rem;
+        margin-right: 0.3rem;
+    }
+    .logpage .logButton button:last-of-type {
+        width: 9.5rem;
+        margin-left: 0.3rem;
+    }
+    .logpage label {
+        display: block;
+    }
+
+    .logpage input {
+        width : 20rem;
+        border: none;
+        border-bottom: rgb(63, 62, 61) 1px solid;
+    }
+    .logpage input::placeholder {
+        opacity: 0;
+    }
+    .logpage input[type='submit'] {
+        width : 10rem;
+    }
+    .logpage form {
+        margin: 1rem auto;
+        width: 20rem;
+        border: orange 1px solid;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 20rem;
     }
     footer ul {
         display: flex;

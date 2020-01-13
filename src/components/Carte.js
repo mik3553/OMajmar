@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Footer from './Footer'
 import Produit from './Produit'
 
-//Nos donnes
+//Nos données
 import entrees from '../carte/entrees'
 import plats from '../carte/plats'
 import desserts from '../carte/desserts'
@@ -13,7 +13,6 @@ export default class Carte extends Component {
         super(props)
     
         this.state = {
-            
              entrees : [],
              plats : [],
              desserts : []
@@ -24,13 +23,32 @@ export default class Carte extends Component {
         this.setState({entrees, plats, desserts })
     }
 
-   
     render() {
         
-        // fetch('http://localhost:3050/entrees')
+        // fetch('http://localhost:3050/entrees', { mode: 'no-cors' })
         //     .then(response => {
         //         console.log(response)
+        //         if (response.ok) {
+        //             response.json()
+        //         }
         //     });
+        // fetch("https://brianboudrioux.fr/simplon/api/products")
+        //     .then(response => {
+        //         console.log(response)
+        //         if (response.ok) {
+        //             response.json()
+        //                 .then((response) => {
+        //                     const film = response.forEach((item) => {
+        //                         console.log(item.name);
+        //                         const response = this.state.response
+        //                         this.setState({ response: item.name })
+        //                     })
+        //                 })
+        //         } else {
+        //             console.error('server response : ' + response.status);
+        //         }
+        //     })
+        //     .catch(console.error)
             
 
         const entrees = [...this.state.entrees]
