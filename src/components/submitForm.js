@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import PageAccueil from "./PageAccueil";
 
-export default class Home extends Component {
+export default class submitForm extends Component {
+    state = {
+
+    }
     render() {
         return (
             <div>
-                <PageAccueil />
+                <input type="button" />
             </div>
         )
     }
 }
-
