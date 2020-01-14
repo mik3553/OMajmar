@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import Header from './Header'
+import Footer from './Footer'
+
 
 
 export default class Evenement extends Component {
@@ -84,51 +87,54 @@ export default class Evenement extends Component {
 
         ]
 
-        let mignardiseList = mignardises.map(mignardise => <li className="mignardise-items">{mignardise}</li>)
-        let repasList = repas.map(repa => <li className="repas-items">{repa}</li>)
-        let gourmandisesList = gourmandises.map(gourmandise => <li className="gourmandise-items"> {gourmandise}</li>)
+        let mignardiseList = mignardises.map(mignardise => <li key='mignardise' className="mignardise-items">{mignardise}</li>)
+        let repasList = repas.map(repa => <li key='repa' className="repas-items">{repa}</li>)
+        let gourmandisesList = gourmandises.map(gourmandise => <li key='gourmandise' className="gourmandise-items"> {gourmandise}</li>)
         return (
+            <Fragment>
+                <Header />
+                < div className="evenement" >
+                    {/* <header className="header-event">
+                        <a >LOGO</a>
+                        <h1 > ÉVÈNEMENTS</h1>
+                        <a>connexion</a>
 
-            < div className="evenement" >
-                <header className="header-event">
-                    <a >LOGO</a>
-                    <h1 > ÉVÈNEMENTS</h1>
-                    <a>connexion</a>
+                    </header> */}
 
-                </header>
+                    <div className="container-mignardise">
+                        {/* bg-image ? */}
+                        <h2>MIGNARDISES</h2>
 
-                <div className="container-mignardise">
-                    {/* bg-image ? */}
-                    <h2>MIGNARDISES</h2>
+                        <ul className="list-mignardise">
+                            {mignardiseList}
+                        </ul>
+                    </div>
+                    <br />
+                    <div className="container-repas">
+                        {/* bg-image ? */}
+                        <h2>REPAS</h2>
+                        <ul className="list-repas">
+                            {repasList}
+                        </ul>
 
-                    <ul className="list-mignardise">
-                        {mignardiseList}
-                    </ul>
-                </div>
-                <br />
-                <div className="container-repas">
-                    {/* bg-image ? */}
-                    <h2>REPAS</h2>
-                    <ul className="list-repas">
-                        {repasList}
-                    </ul>
+                    </div>
+                    <br />
 
-                </div>
-                <br />
+                    <div className="container-gourmandise">
+                        {/* bg-image ? */}
+                        {/* <a> ou <link> ????*/}
+                        <h2>GOURMANDISES</h2>
+                        <ul className="list-gourmandise">
+                            {gourmandisesList}
+                        </ul>
+                        {/* </a> */}
+                    </div>
+                    <br />
+                    {/* composant devis */}
 
-                <div className="container-gourmandise">
-                    {/* bg-image ? */}
-                    {/* <a> ou <link> ????*/}
-                    <h2>GOURMANDISES</h2>
-                    <ul className="list-gourmandise">
-                        {gourmandisesList}
-                    </ul>
-                    {/* </a> */}
-                </div>
-                <br />
-                {/* composant devis */}
-
-            </div >
+                </div >
+                <Footer />
+            </Fragment>
         )
     }
 }
