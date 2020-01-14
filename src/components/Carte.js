@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Footer from './Footer'
 import Produit from './Produit'
 
@@ -6,6 +6,7 @@ import Produit from './Produit'
 import entrees from '../carte/entrees'
 import plats from '../carte/plats'
 import desserts from '../carte/desserts'
+import Header from './Header'
 
 
 export default class Carte extends Component {
@@ -72,7 +73,9 @@ export default class Carte extends Component {
         
 
         return (
-            <div>
+
+            <Fragment>
+                <Header />
                 <section className='carte'>
                     <h2>Lunch Box</h2>
                     <strong>Osez un voyage culinaire<br/>le temps d'une pause déjeuner</strong>
@@ -83,12 +86,14 @@ export default class Carte extends Component {
                                 {entrees}
                             </div>
                         </article>
+
                         <article>
                             <h3>plat</h3>
                             <div className='flexProduit' >
                                 {plats}
                             </div>
                         </article>
+
                         <article>
                             <h3>déssert</h3>
                             <div className='flexProduit' >
@@ -98,7 +103,7 @@ export default class Carte extends Component {
                     </div>
                 </section>
                 <Footer />
-            </div>
+            </Fragment >
         )
     }
 }

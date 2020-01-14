@@ -8,8 +8,6 @@ import "../App.css";
 
 export default class Header extends Component {
 
-
-
   render() {
     return (
       // <div></div>
@@ -21,16 +19,16 @@ export default class Header extends Component {
             {/* SIDEBAR  */}
             <div className="toolbar_nav-aside">
               <ul>
-                <li>ÉVÈNEMENTS</li>
-                <li >GALERIE</li>
-                <li >LA CARTE</li>
+                <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
+                {/* <li><Link to='/evenements'>GALERIE</Link></li> */}
+                <li><Link to='/menus'>LA CARTE</Link></li>
               </ul>
             </div>
           </DrawTogglebutton >
 
 
           <div className="toolbar_logo">
-            <a>LOGO</a>
+            <h1><Link to='/'>O'Majmar</Link></h1>
           </div>
 
 
@@ -38,9 +36,9 @@ export default class Header extends Component {
           <div className="toolbar_nav-items">
 
             <ul>
-              <li >ÉVÈNEMENTS</li>
-              <li >GALERIE</li>
-              <li >LA CARTE</li>
+              <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
+              {/* <li><Link to='/evenements'>GALERIE</Link></li> */}
+              <li><Link to='/menus'>LA CARTE</Link></li>
             </ul>
 
           </div>
