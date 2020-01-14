@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import PageAccueil from "./PageAccueil";
 
-export default class Home extends Component {
+export default class cgv extends Component {
     render() {
         return (
             <div>
-                <PageAccueil />
+                <h2>CONDITIONS GENERALES DE VENTES</h2>
             </div>
         )
     }
 }
-

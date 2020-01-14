@@ -3,8 +3,6 @@
    License: none (public domain)
 */
 
-/* ....... */
-
 html,
 body,
 div,
@@ -480,3 +478,223 @@ p:hover {
     border: red 1px solid;
   }
 }
+
+/*==========générale=============*/
+.alert {
+    font-size: 0.7em;
+    color:orange;
+    margin-top: -0.4rem;
+}
+.green {
+    font-size: 0.7em;
+    color: green;
+    margin-top: -0.4rem;
+}
+
+/*===========Carte component=============*/
+
+.carte h2 {
+    margin: 0.5rem;
+    text-transform: uppercase;
+    color:orangered;
+    text-align: center;
+}
+.carte strong {
+    display: block;
+    color: orange;
+    text-align: center;
+}
+.carte h3 {
+    padding-bottom: 0.5rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    color: goldenrod;
+    text-align: center;
+    border-bottom: 2px solid goldenrod;;
+    width: 17rem;
+    margin: 2rem auto;
+}
+.carte figure {
+    width: 16rem;
+    margin: 0 auto 1rem auto;
+    /* border-bottom: 1px dashed black; */
+    box-shadow: 2px 3px 2px  rgb(236, 233, 233);
+}
+.carte p{
+    margin: 0 0 0.5rem 0.5rem;
+    color:rgb(246, 197, 106);
+}
+.carte span, figcaption {
+    display: block;
+    margin: 0 0 0.5rem 0.5rem;
+}
+.carte button {
+    display: block;
+    margin: 0 auto 0.5rem auto; 
+}
+.carte img {
+    
+    width: 16rem;
+}
+/*===========LogPage component=============*/
+/* .logpage {
+    background-color: #F2C078 ;
+} */
+.logButton {
+    margin: 0 2rem; 
+}
+.logButton button {
+    width: 50%;
+    /* margin-top: rem; */
+    background-color:white ;
+    border: 1px solid orange;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+}
+.logButton button:last-of-type{
+    border-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; 
+}
+.logButton button:hover {
+    background-color: orange;
+}
+.logButton button:focus{
+    background-color: orange;
+}
+.logpage h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: orange;
+    text-align: center;
+    margin-top: 1rem;
+}
+.logpage label {
+    display: none;
+}
+.logpage input {
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: rgb(63, 62, 61) 1px solid;
+}
+.logpage input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 1px solid orange;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+.logpage input[type='submit']:hover {
+    background-color: orange;
+}
+.logpage form {
+    margin: 1rem 2rem;
+}
+
+
+/*===========Footer component=============*/
+
+footer {
+    margin: 1rem auto;
+    background-color: silver;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    width: 11rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: black solid 1px;
+}
+footer li:last-of-type {
+    border-bottom:none;
+}
+footer p {
+    margin: 0.5rem auto;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 900px) {
+    .alert {
+
+        margin-bottom: 0.5rem;
+    }
+    .flexProduit {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .carte figure {
+        width: 20rem;
+        margin: 0 auto 1rem auto;
+        box-shadow: 2px 3px 2px  rgb(236, 233, 233);
+    }
+    .carte h3 {
+        width: 70%;
+    }
+    .carte img {
+        height: 15rem;
+        width: 20rem;
+    }
+
+
+
+    .logpage .logButton {
+        width: 20rem;
+        margin: 1rem auto; 
+    }
+    .logpage .logButton button {
+        margin-top: 15rem;
+        width: 9.5rem;
+        margin-right: 0.3rem;
+    }
+    .logpage .logButton button:last-of-type {
+        width: 9.5rem;
+        margin-left: 0.3rem;
+    }
+    .logpage label {
+        display: block;
+    }
+
+    .logpage input {
+        width : 20rem;
+        border: none;
+        border-bottom: rgb(63, 62, 61) 1px solid;
+    }
+    .logpage input::placeholder {
+        opacity: 0;
+    }
+    .logpage input[type='submit'] {
+        width : 10rem;
+    }
+    .logpage form {
+        margin: 1rem auto;
+        width: 20rem;
+        border: orange 1px solid;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 20rem;
+    }
+    footer ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer li {
+        border-bottom: none;
+    }
+}
+
