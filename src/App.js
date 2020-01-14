@@ -6,6 +6,8 @@ import Evenement from "./components/Evenement"
 import "./App.css";
 import Carte from './components/Carte'
 import LogPage from './components/LogPage'
+import Booking from './components/Booking'
+
 
 
 class App extends Component {
@@ -18,6 +20,7 @@ class App extends Component {
         {/* LaCarte */}
         <LogPage />
         <Carte />
+        <Booking />
       </div>
     );
   }

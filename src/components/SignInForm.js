@@ -76,7 +76,7 @@ export default class SignInForm extends Component {
                             value={this.state.firstName}
                             type='text'
                             name='firstName'
-                            placeholder='Nom'
+                            placeholder='Prénom'
                             required 
                             onChange={this.handleChange}/>
                     </fieldset>
@@ -86,7 +86,7 @@ export default class SignInForm extends Component {
                             value={this.state.lastName}
                             type='text' 
                             name='lastName' 
-                            placeholder='Prénom'
+                            placeholder='Nom'
                             required 
                             onChange={this.handleChange}/>
                     </fieldset>
