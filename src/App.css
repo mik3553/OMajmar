@@ -291,14 +291,6 @@ body {
   cursor: pointer;
 }
 
-p {
-  margin: 15% 0 0 0;
-}
-
-p:hover {
-  border: black solid 0.5px;
-}
-
 /* COMPOSANT EVENEMENT */
 .evenement {
   display: flex;
@@ -483,8 +475,17 @@ p:hover {
 /* body {
     background-color: rgb(240, 211, 116);
 } */
+
+h2 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 600;
+}
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight:600;
+}
 p {
-    color: grey;
+    color: rgb(58, 56, 56);
 }
 .alert {
     font-size: 0.7em;
@@ -602,6 +603,25 @@ p {
 .bookingPage textarea {
     margin-top: 1rem;
     width: 100%;
+}
+/*===========CGV component=============*/
+.cgv {
+  width: 75%;
+  margin: 0 auto;
+}
+.cgv h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+.cgv ol li{
+  list-style: decimal;
+}
+.cgv h3 {
+  margin: 0.5rem auto;
+}
+.cgv p {
+  display: block;
+  margin-bottom:1rem;
 }
 
 

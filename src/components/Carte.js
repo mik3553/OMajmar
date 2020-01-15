@@ -26,23 +26,22 @@ export default class Carte extends Component {
 
     render() {
         
-        // fetch('http://localhost:3050/entrees', { mode: 'no-cors' })
-        //     .then(response => {
-        //         console.log(response)
-        //         if (response.ok) {
-        //             response.json()
-        //         }
-        //     });
+        fetch('http://localhost:3050/entrees')
+            .then(response => {
+                console.log(response)
+                // if (response) {
+                //     response.json()
+                //     console.log(response.json())
+                // }
+            });
         // fetch("https://brianboudrioux.fr/simplon/api/products")
         //     .then(response => {
         //         console.log(response)
-        //         if (response.ok) {
+        //         if (response) {
         //             response.json()
         //                 .then((response) => {
-        //                     const film = response.forEach((item) => {
-        //                         console.log(item.name);
-        //                         const response = this.state.response
-        //                         this.setState({ response: item.name })
+        //                     const film = response.map((item) => {
+        //                         console.log(item);  
         //                     })
         //                 })
         //         } else {

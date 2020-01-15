@@ -6,6 +6,7 @@ import LogPage from './components/LogPage'
 import Booking from './components/Booking'
 import Accueil from './components/Accueil'
 import Evenement from "./components/Evenement"
+import Cgv from "./components/Cgv"
 // nos CSS
 import "./App.css";
 
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/inscription-connexion' component={LogPage} />
             <Route path='/reservation' component={Booking} />
             <Route path='/evenements' component={Evenement} />
+            <Route path='/cgv' component={Cgv} />
           </Switch>
         </BrowserRouter>
     );
