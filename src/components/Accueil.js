@@ -9,40 +9,40 @@ export default class PageAccueil extends Component {
     render() {
         return (
             <Fragment>
+
                 <Header />
                 <div className="landing-page">
                     <div className="bg-image">
-                        <h2 className="absolute-Title">O'MAJMAR</h2>
+
                         <img
-                            src="../images/morocco-325324_1920.png"
+                            src={require("../images/photo-Accueil.jpg")}
                             alt="tajine_test"
                         />
                     </div>
                     <div className="control-horaires">
-                        <i>horaires</i>
-                        <i>|</i>
-                        <i>horaires</i>
-                        <i>|</i>
-                        <i>horaires</i>
+                        <p> <span>" </span> Texte de présentation: qui sommes nous ? que faisons nous ?
+                            quel est notre manifeste ?<span> "</span>
+                        </p>
 
                     </div>
 
-                    <div className="users-command">
+                    <div className="users-command container">
 
-                        <button className="btn-particulier btn-control" type="submit">
-                            MENU PARTICULIER
-                                <p className="command">COMMANDE</p>
+                        <button className="btn-particulier btn-control btn" type="submit">
+                            PARTICULIER ?
                         </button>
-
-                        <button className="btn-entreprise btn-control" type="submit">
-                            MENU ÉVÈNEMENT
-                                <p className="devis">DEVIS</p>
+                        <br />
+                        <button className="btn-entreprise btn-control btn" type="submit">
+                            ÉVÈNEMENTS ?
                         </button>
 
                     </div>
                 </div>
+
                 <Footer />
+
             </Fragment>
+
         )
     }
 }

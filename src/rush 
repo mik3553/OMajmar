@@ -1,0 +1,53 @@
+
+/* COMPOSANT EVENEMENT */
+/* .evenement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-event {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.evenement h2 {
+  text-align: center;
+  border: 1px solid black;
+  padding: 15%;
+}
+
+.container-mignardise,
+.container-repas,
+.container-gourmandise {
+  border: black 0.5px solid;
+}
+
+.evenement ul {
+  display: none;
+} */
+
+/* .container-photo {
+  margin:5% 0 0 0;
+border:red solid 1px;
+height: 40vh;
+}
+.container-photo .description{
+  border:black solid 1px;
+} */
+
+/* EVENEMENT MENU */
+
+
+/* .container-menu{
+margin: 0;
+padding: 0;
+
+}
+.container-menu button{
+margin: 5% 0 0 1.2% ;
+  
+} */

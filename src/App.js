@@ -12,15 +12,15 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-        <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={Accueil} />
-            <Route path='/menus' component={Carte} />
-            <Route path='/inscription-connexion' component={LogPage} />
-            <Route path='/reservation' component={Booking} />
-            <Route path='/evenements' component={Evenement} />
-          </Switch>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Accueil} />
+          <Route path='/menus' component={Carte} />
+          <Route path='/inscription-connexion' component={LogPage} />
+          <Route path='/reservation' component={Booking} />
+          <Route path='/evenements' component={Evenement} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
