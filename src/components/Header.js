@@ -10,7 +10,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      // <div></div>
+
       <header className="toolbar">
         <nav className="toolbar_navigation">
           <div className="espace" />
@@ -28,7 +28,7 @@ export default class Header extends Component {
 
 
           <div className="toolbar_logo">
-            <h1><Link to='/'>O'Majmar</Link></h1>
+            <h1><Link to='/'>O'MAJMAR</Link></h1>
           </div>
 
 
@@ -37,7 +37,7 @@ export default class Header extends Component {
 
             <ul>
               <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
-              {/* <li><Link to='/evenements'>GALERIE</Link></li> */}
+
               <li><Link to='/menus'>LA CARTE</Link></li>
             </ul>
 

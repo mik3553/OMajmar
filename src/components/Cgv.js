@@ -1,3 +1,4 @@
+
 import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Footer from './Footer'
@@ -81,7 +82,7 @@ export default class Cgv extends Component {
                             <p>En aucun cas, la société EL ASHRY ne saurait être tenue responsable d’une éventuelle détérioration des produits du fait de leur retrait tardif auprès du transporteur. Les dépassements de délais de livraison ne peuvent donner lieu à des dommages et intérêts. Toutefois, et sous réserve des limitations énumérées dans les présentes C.G.V, lorsque le retard de livraison sera supérieur à 48 heures ouvrables, le montant total de la commande sera recrédité au Client sous forme d’avoir. Le délai de livraison ne saurait être garanti pendant les périodes de fêtes telles que Noël, Pâques, Saint-Valentin, Fête des mères… Pendant ces périodes, les commandes livrées en retard ne sauraient bénéficier d’un avoir.</p>
                             <p>La société EL ASHRY se réserve le droit de déconseiller l’envoi de certains produits délicats durant les périodes de chaleur.</p>
                             <p>Tarifs des livraisons par coursier et par colis isotherme :</p>
-                            <p>Du lundi au samedi : Zone 1 (Paris) 30 € TTC // Zone 2 (92, 93, 94) 40 € TTC // Zone 3 (77, 78, 91, 95) 65 € TTC<br/>
+                            <p>Du lundi au samedi : Zone 1 (Paris) 30 € TTC // Zone 2 (92, 93, 94) 40 € TTC // Zone 3 (77, 78, 91, 95) 65 € TTC<br />
                                 Dimanche et jours fériés : Zone 1 (Paris) 55 € TTC // Zone 2 (92, 93, 94) 60 € TTC // Zone 3 (77, 78, 91, 95) 115 € TTC</p>
                         </li>
                         <li>
@@ -93,8 +94,8 @@ export default class Cgv extends Component {
                             <h3>RÉCLAMATIONS ET LITIGES</h3>
                             <p>Les réclamations ou contestations seront toujours reçues avec une bienveillance attentive, la bonne foi étant toujours présumée chez celui qui prend la peine d’exposer le litige.</p>
                             <p>A la réception des produits, le Client devra s'assurer de la conformité de la livraison avec sa commande. Toute réclamation devra, pour être prise en compte, intervenir dans les 24 heures suivant la réception, compte tenu du caractère périssable des produits. Les dommages éventuels doivent faire l’objet de réserves précises, datées et signées, sur le bordereau de livraison.</p>
-                            <p>Les réclamations sont à adresser par courrier électronique à l’adresse contact.omajmar@gmail.com.<br/>
-                            Après analyse et si acceptation de la réclamation par la société EL ASHRY, un geste commercial, avoir ou remboursement sera proposé au Client.</p>
+                            <p>Les réclamations sont à adresser par courrier électronique à l’adresse contact.omajmar@gmail.com.<br />
+                                Après analyse et si acceptation de la réclamation par la société EL ASHRY, un geste commercial, avoir ou remboursement sera proposé au Client.</p>
                         </li>
                         <li>
                             <h3>PROPRIÉTÉ INTELLECTUELLE ET INTERDICTION</h3>

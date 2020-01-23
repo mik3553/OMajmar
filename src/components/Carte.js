@@ -1,3 +1,4 @@
+
 import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Footer from './Footer'
@@ -12,16 +13,16 @@ export default class Carte extends Component {
     constructor(props) {
         super(props)
         this.state = {
-             entrees : [],
-             plats : [],
-             desserts : []
+            entrees: [],
+            plats: [],
+            desserts: []
         }
     }
-    componentDidMount(){
+    componentDidMount() {
         // setInterval(() => {
-            this.getEntrees()
-            this.getPlats()
-            this.getDesserts()
+        this.getEntrees()
+        this.getPlats()
+        this.getDesserts()
         // }, 5000);
     }
     getEntrees = () => {
@@ -31,7 +32,7 @@ export default class Carte extends Component {
                     response.json()
                         .then((response) => {
                             console.log(response)
-                            this.setState({entrees : response})
+                            this.setState({ entrees: response })
                         })
                 } else {
                     console.error('server response : ' + response.status);
@@ -78,10 +79,10 @@ export default class Carte extends Component {
 
     render() {
         const entrees = [...this.state.entrees]
-            .map(entree => 
+            .map(entree =>
                 <ProduitEntree
                     key={entree._id}
-                    details = {entree}
+                    details={entree}
                 />)
         const plats = [...this.state.plats]
             .map(plat =>
@@ -95,7 +96,7 @@ export default class Carte extends Component {
                     key={dessert._id}
                     details={dessert}
                 />)
-        
+
         return (
             <Fragment>
                 <Header />
@@ -127,8 +128,9 @@ export default class Carte extends Component {
                 </section>
                 <Booking />
                 <Footer />
-                
+
             </Fragment >
         )
     }
 }
+

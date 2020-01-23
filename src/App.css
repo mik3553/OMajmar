@@ -1,3 +1,4 @@
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,10 +135,15 @@ table {
 
 /* COMPONENT HEADER */
 body {
-  /* background: rgb(212, 212, 212); */
+ 
+  /* border: chocolate 1px solid; */
+  /* background: #fff2db; */
+
+
 }
 .toolbar_nav-items {
   /* display:none; */
+
 }
 
 .toolbar {
@@ -157,15 +163,22 @@ body {
 }
 
 .toolbar_logo a {
-  color: black;
-  font-size: 1.5rem;
 
-  /* text-decoration: none; */
+  color:whitesmoke;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .2rem;
+  font-weight: medium;
+
+  text-decoration: none;
 }
 
 .toolbar_navigation {
   display: flex;
   padding: 8% 0 0 0;
+  background: #21537a;
+  
+  
 }
 
 .espace {
@@ -176,37 +189,41 @@ body {
 
 .toolbar_nav-aside {
   position: fixed;
-  background: rgb(194, 174, 174);
+  /* background: rgb(194, 174, 174); */
+  background:#db7622 ;
+  z-index: 1000;
 
   /* ICI JE FIXE MA BAR DE MENU */
   top: 80px;
-
-  width: 0;
-  width: 100%;
-
-  /* height: 30vh; */
+  width: 38%;
+ 
   height: calc(31.3vh - 10px);
-  transition: all 0 0.3s ease-in-out;
-
-  z-index: 1000;
-
-  font-size: 1.5rem;
+  transition: all 0 0.7s ease-in-out;
+  font-size: 1rem;
 }
 
 .toolbar_nav-aside ul {
   padding-top: 8%;
+
 }
 
-.toolbar_nav-aside ul li {
-  opacity: 0.5;
+
+
+.toolbar_nav-aside ul li a{
+  /* opacity: 0.5; */
   font-family: arial;
-  color: black;
+ 
+  color: whitesmoke;
+
   cursor: pointer;
   line-height: 2.5;
-  text-align: center;
+  text-align: left;
+  padding: 10%;
+
+  text-decoration: none;
 }
 .toolbar_nav-aside ul li:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 .toolbar_nav-items {
@@ -221,14 +238,18 @@ body {
   height: 15vh;
   width: 100%;
   padding: 5% 0 0 0;
-
   display: none;
 }
 
 .toolbar_nav-items a {
   text-decoration: none;
   font-size: 1rem;
-  color: black;
+
+
+              /* COULEUR MENU */
+  /* color: black; */
+  color:whitesmoke;
+
   text-align: center;
 }
 
@@ -245,95 +266,137 @@ body {
 /* COMPOSANT PAGEACCUEIL */
 
 .landing-page {
-  position: absolute;
-  top: 5rem;
-  /* border: 4px solid black ; */
   width: 100%;
-  min-height: 40vh;
+
   display: flex;
   flex-direction: column;
+  /* border: chocolate 1px solid; */
 }
 .bg-image {
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
 }
 
 .bg-image img {
   width: 376px;
   height: 244px;
-  z-index: 0; /*============= */
+
 }
 .bg-image h2 {
-  position: absolute;
-  z-index: 1; /*============= */
-  font-size: 2rem;
-  color: whitesmoke;
-  /* text-shadow: black  ; */
-
-  text-shadow: 1px 1px 5px black;
-  letter-spacing: 0.7rem;
+ 
 }
 
+/* Contenu à l'accueil */
 .control-horaires {
+padding: 7%;
+text-align: justify;
+margin: 0;
+}
+
+.control-horaires span {
+  font-size: 1.5rem;
+  color: #db7622;
+}
+
+.users-command{
+  cursor:pointer;
   display: flex;
   justify-content: space-around;
-  padding: 2% 0 2% 0;
+  margin-bottom: 5%;
+  min-height: 25vh;
 }
+
 
 .btn-control {
-  width: 50vw;
-  height: 30vh;
-  /* font-size: ; */
-  font-weight: bolder;
-  /* border: none; */
-  cursor: pointer;
+  background:  #db7622;
+  color: whitesmoke;
+  border:none;
+  margin:10%;
 }
+
+.users-command p {
+/* border: 1px solid black; */
+margin: 0 11% 0 11%;
+text-align: justify;
+}
+
+
+
+
+  /* .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} */
+
+
+
+
+
 
 /* COMPOSANT EVENEMENT */
-.evenement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
+
+.container-menu.btn{
+/* A REVOIR SE CONFONT AVEC LES BOUTONS DE L ACCUEIL */
+  margin-left: 1.1%;
+  padding: 2.5% 0 0 0;
+  border: black 1px solid;
+ 
+ }
+
+
+figure{
+ width:380px;
 }
 
-.header-event {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.figure-container {
+ height: 40vh;
+ text-transform: uppercase;
 }
 
-.evenement h2 {
-  text-align: center;
-  border: 1px solid black;
-  padding: 15%;
+.figcaption-name{
+   margin: 0 auto ;
+   text-align: center;
+   padding: 2% 0 2% 0 ;
 }
 
-.container-mignardise,
-.container-repas,
-.container-gourmandise {
-  border: black 0.5px solid;
+.container-img{
 }
 
-.evenement ul {
-  display: none;
+figure img{
+width: 100%; 
+} 
+
+ul.slick-dots{
+ height:5vh;
 }
+
+
+
 
 /* //lorsque la largeur dépasse les 6OOpx    */
 @media only screen and (min-width: 600px) {
   body {
-    /* display: flex;
-    flex-direction:row; */
+ 
   }
 
   .toolbar {
-    position: relative;
+    position: fixed;
     height: 5vh;
     padding: 0% 0% 5% 0;
-    /* border:red 4px solid; */
     border-bottom: solid 0.2px;
   }
 
@@ -344,6 +407,8 @@ body {
     align-items: center;
     /* border: blue solid 4px; */
     padding: 3% 0% 1% 0;
+
+
   }
 
   .toolbar_logo {
@@ -377,22 +442,23 @@ body {
 
   .toolbar_nav-items li {
     border-bottom: solid 0.2px;
+    color:whitesmoke;
+  }
+  .toolbar_nav-items li:hover{
+    color: orange;
   }
 
-  /* COMPOSANT PAGEACCUEIL */
+  /* COMPOSANT ACCUEIL */
 
-  .landing-page {
-    position: absolute;
-    top: 15%;
-  }
 
   .bg-image {
+    margin-top: 9vh;
     height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     /* border:2px solid black; */
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
   }
 
   .bg-image img {
@@ -411,86 +477,62 @@ body {
     margin: 1% 0 1% 0;
   }
 
-  .users-command {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .btn-control {
-    width: 40vw;
-    height: 50vh;
-  }
-
-  /* SIDEBAR  Mobile  */
+ 
+  /* SIDEBAR  Mobile  n'est pas visible */
 
   .toolbar_nav-aside {
     display: none;
   }
 
   /* COMPOSANT EVENEMENT */
-  .header-event {
-    margin-bottom: 5%;
-    border: tomato 1px solid;
+
+  
+  .container-menu{
+    margin: 10% 0 5% 0;
+    width: 100%;
   }
 
-  .evenement h2 {
-    text-align: center;
-    border: 1px solid black;
-    padding: 5%;
+  .container-menu.btn{
+    margin-left: 1.1%;
+    padding: 2.5% 0 0 0;
+
   }
 
-  .evenement ul {
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
+
+
+ 
+
+
+  
+
+  .slick-prev:before, .slick-next:before {
+    /* font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;*/
+    color: black;
+    /*
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    border: 2px solid black;
   }
 
-  .container-mignardise,
-  .container-repas,
-  .container-gourmandise {
-    width: 40%;
-  }
 
-  .container-mignardise {
-    position: relative;
-    left: 5%;
-    border: yellow 1px solid;
-  }
-
-  .container-repas {
-    position: relative;
-    left: 55%;
-    border: blue 1px solid;
-  }
-
-  .container-gourmandise {
-    position: relative;
-    left: 5%;
-    border: red 1px solid;
-  }
 }
+
+
 
 /*==========générale=============*/
 /* body {
     background-color: rgb(240, 211, 116);
 } */
-
-h2 {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 600;
-  color: #db7622;
-}
-h3 {
-  font-family: 'Lato', sans-serif;
-  font-weight:600;
-}
 p {
-    color: white;
+    color: grey;
+
 }
 .alert {
     font-size: 0.7em;
-    color: #db7622;
+    color:orange;
     margin-top: -0.4rem;
 }
 .green {
@@ -499,59 +541,44 @@ p {
     margin-top: -0.4rem;
 }
 .required {
-    color: #db7622;
+    color:orangered
 }
 
+
 /*===========Carte component=============*/
-.carte {
-  margin: 2rem auto;
-}
+
 .carte h2 {
     margin: 0.5rem;
     text-transform: uppercase;
-    color:#db7622;
-    font-weight: 900;
+    color:orangered;
     text-align: center;
 }
 .carte strong {
     display: block;
-    color: #d68545;
-    font-weight: 600;
+    color: orange;
     text-align: center;
 }
 .carte h3 {
     padding-bottom: 0.5rem;
     margin: 1rem auto;
     text-transform: uppercase;
-    color: #21537a;
+    color: goldenrod;
     text-align: center;
-    border-bottom: 2px solid  #21537a;
+    border-bottom: 2px solid goldenrod;;
     width: 17rem;
     margin: 2rem auto;
 }
 .carte figure {
-  text-align: center;
     width: 16rem;
     margin: 0 auto 1rem auto;
     /* border-bottom: 1px dashed black; */
-     border: 1px rgb(187, 182, 182) solid;
-     box-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
-     background-color: whitesmoke;
+     border: 2px orange solid;
 }
 .carte p{
     margin: 0 0 0.5rem 0.5rem;
-    color:rgb(47, 46, 46);
+    color:grey;
 }
-.carte figcaption {
-    color: black;
-    text-transform: uppercase;
-    text-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
-    font-weight: 600;
-    display: block;
-    margin: 0 0 0.5rem 0.5rem;
-}
-.carte span {
-    color: black;
+.carte span, figcaption {
     display: block;
     margin: 0 0 0.5rem 0.5rem;
 }
@@ -560,11 +587,9 @@ p {
     margin: 0 auto 0.5rem auto; 
 }
 .carte img {
+    
     width: 16rem;
 }
-
-
-
 /*===========LogPage component=============*/
 /* .logpage {
     background-color: #F2C078 ;
@@ -576,7 +601,7 @@ p {
     width: 50%;
     /* margin-top: rem; */
     background-color:white ;
-    border: 2px solid #d68545;
+    border: 1px solid orange;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem; 
 }
@@ -586,87 +611,59 @@ p {
     border-bottom-right-radius: 0.5rem; 
 }
 .logButton button:hover {
-    background-color: #db7622;
+    background-color: orange;
 }
-.logpage h2 ,.bookingPage h2{
+
+.logpage h2 ,.bookingPage h2 {
     font-weight: bold;
     font-size: 1.5em;
-    color: #db7622;
+    color: orange;
     text-align: center;
     margin-top: 1rem;
 }
-.logpage label,.bookingPage label{
+.logpage label,.bookingPage label {
     display: none;
 }
-.logpage input,.bookingPage input{
+.logpage input,.bookingPage input {
     width : 100%;
     margin: 0.5rem auto;
     border: none;
-    border-bottom: #21537a 1px solid;
+    border-bottom: rgb(63, 62, 61) 1px solid;
 }
 .logpage input[type='submit'],.bookingPage input[type='submit'] {
     display: block;
     width : 7rem;
     margin: 0.5rem auto;
-    border: 2px solid #db7622;
-    background-color: #d68545;
+    border: 1px solid orange;
+    background-color: white;
     border-radius: 0.5rem;
 }
 .logpage input[type='submit']:hover ,.bookingPage input[type='submit']:hover {
-    background-color: #db7622;
+    background-color: orange;
 }
-.logpage form ,.bookingPage form  {
-  margin: 1rem auto;
-  width: 20rem;
-  border:#21537a 1px solid;
-  padding: 1rem;
-  border-radius: 1rem;
+.logpage form,.bookingPage form {
+    margin: 1rem 2rem;
 }
 .bookingPage textarea {
     margin-top: 1rem;
     width: 100%;
 }
-/*===========CGV component=============*/
-.cgv {
-  width: 75%;
-  margin: 0 auto;
-}
-.cgv h2 {
-  text-align: center;
-  margin: 1rem auto;
-}
-.cgv ol li{
-  list-style: decimal;
-}
-.cgv h3 {
-  margin: 0.5rem auto;
-}
-.cgv p {
-  color: rgb(59, 59, 59);
-  display: block;
-  margin-bottom:1rem;
-}
+
 
 /*===========Footer component=============*/
 
 footer {
     margin: 1rem auto;
-    background-color: #21537a;
+    background: #21537a;
+
 }
 
 footer ul {
     text-align: center;
-}
-footer a {
-    color: white;
-    text-decoration: none;
-}
-a:hover {
-  color: #db7622;
+    color: whitesmoke;
 }
 
 footer li {
-    color: white;
     width: 11rem;
     margin: 0 auto;
     padding: 1rem;
@@ -674,36 +671,37 @@ footer li {
 }
 footer li:last-of-type {
     border-bottom:none;
+
 }
 footer p {
     margin: 0.5rem auto;
+    color: whitesmoke;
+
 }
+
 
 
 
 
 @media screen and (min-width: 900px) {
     .alert {
+
         margin-bottom: 0.5rem;
     }
     .flexProduit {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .carte {
-      margin: 3rem 12rem;
+        justify-content: space-between;
     }
     .carte figure {
-        width: 25rem;
-        margin: 0 auto 2rem auto;
+        width: 18rem;
+        margin: 0 auto 1rem auto;
     }
     .carte h3 {
-        width: 100%;
+        width: 85%;
     }
     .carte img {
-        height: 17rem;
-        width: 25rem;
+        height: 13rem;
+        width: 18rem;
     }
 
 
@@ -713,7 +711,7 @@ footer p {
         margin: 1rem auto; 
     }
     .logpage .logButton button {
-        
+        margin-top: 15rem;
         width: 9.5rem;
         margin-right: 0.3rem;
     }
@@ -725,7 +723,7 @@ footer p {
         display: block;
     }
 
-    .logpage input,.bookingPage input{
+    .logpage input,.bookingPage input {
         width : 20rem;
         border: none;
         border-bottom: rgb(63, 62, 61) 1px solid;
@@ -733,10 +731,17 @@ footer p {
     .logpage input::placeholder ,.bookingPage input::placeholder {
         opacity: 0;
     }
-    .logpage input[type='submit'] ,.bookingPage input[type='submit']  {
+    .logpage input[type='submit'] ,.bookingPage input[type='submit'] {
         width : 10rem;
     }
-
+    .logpage form ,.bookingPage form {
+        margin: 1rem auto;
+        width: 20rem;
+        border: orange 1px solid;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 20rem;
+    }
     footer ul {
         display: flex;
         flex-direction: row;
@@ -747,3 +752,5 @@ footer p {
         border-bottom: none;
     }
 }
+
+
