@@ -14,7 +14,7 @@ export default class PageAccueil extends Component {
                     <div className="bg-image">
                         <h2 className="absolute-Title">O'MAJMAR</h2>
                         <img
-                            src="../images/morocco-325324_1920.png"
+                            src={require(`../images/morocco-325324_1920.png`)}
                             alt="tajine_test"
                         />
                     </div>

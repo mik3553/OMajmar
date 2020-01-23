@@ -23,6 +23,32 @@ export default class Booking extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault()
+
+        const post = JSON.stringify({
+            organization    :this.state.organisme,
+            personToContact :this.state.name,
+            email           :this.state.email,
+            phone           :this.state.phone, 
+            numberOfPersons :this.state.numberOfPersons,
+            budget          :this.state.budget,
+            message         :this.state.message
+        })
+        
+        const options = {
+            method  : 'POST',
+            body    : post,
+            headers : {'content-type':'application/json'}
+        }
+        fetch('http://localhost:3050/booking/create', options)
+            .then(response => {
+                if (response.ok) {
+                } else {
+                    console.error('server response : ' + response.status);
+                }
+            }).catch(error => {
+                console.error(error);
+            });
+
         const message = this.state
         Object.keys(message)
             .forEach(item => {
@@ -65,7 +91,8 @@ export default class Booking extends Component {
                                 type='email'
                                 name='email'
                                 placeholder='E-mail *'
-                                // pattern='/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+                                pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+                                
                                 required
                                 onChange={this.handleChange} />
                         </fieldset>

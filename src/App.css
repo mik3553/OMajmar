@@ -291,14 +291,6 @@ body {
   cursor: pointer;
 }
 
-p {
-  margin: 15% 0 0 0;
-}
-
-p:hover {
-  border: black solid 0.5px;
-}
-
 /* COMPOSANT EVENEMENT */
 .evenement {
   display: flex;
@@ -483,12 +475,22 @@ p:hover {
 /* body {
     background-color: rgb(240, 211, 116);
 } */
+
+h2 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 600;
+  color: #db7622;
+}
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight:600;
+}
 p {
-    color: grey;
+    color: white;
 }
 .alert {
     font-size: 0.7em;
-    color:orange;
+    color: #db7622;
     margin-top: -0.4rem;
 }
 .green {
@@ -497,43 +499,59 @@ p {
     margin-top: -0.4rem;
 }
 .required {
-    color:orangered
+    color: #db7622;
 }
 
 /*===========Carte component=============*/
-
+.carte {
+  margin: 2rem auto;
+}
 .carte h2 {
     margin: 0.5rem;
     text-transform: uppercase;
-    color:orangered;
+    color:#db7622;
+    font-weight: 900;
     text-align: center;
 }
 .carte strong {
     display: block;
-    color: orange;
+    color: #d68545;
+    font-weight: 600;
     text-align: center;
 }
 .carte h3 {
     padding-bottom: 0.5rem;
     margin: 1rem auto;
     text-transform: uppercase;
-    color: goldenrod;
+    color: #21537a;
     text-align: center;
-    border-bottom: 2px solid goldenrod;;
+    border-bottom: 2px solid  #21537a;
     width: 17rem;
     margin: 2rem auto;
 }
 .carte figure {
+  text-align: center;
     width: 16rem;
     margin: 0 auto 1rem auto;
     /* border-bottom: 1px dashed black; */
-     border: 2px orange solid;
+     border: 1px rgb(187, 182, 182) solid;
+     box-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
+     background-color: whitesmoke;
 }
 .carte p{
     margin: 0 0 0.5rem 0.5rem;
-    color:grey;
+    color:rgb(47, 46, 46);
 }
-.carte span, figcaption {
+.carte figcaption {
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
+    font-weight: 600;
+    display: block;
+    margin: 0 0 0.5rem 0.5rem;
+}
+.carte span {
+    color: black;
     display: block;
     margin: 0 0 0.5rem 0.5rem;
 }
@@ -542,9 +560,11 @@ p {
     margin: 0 auto 0.5rem auto; 
 }
 .carte img {
-    
     width: 16rem;
 }
+
+
+
 /*===========LogPage component=============*/
 /* .logpage {
     background-color: #F2C078 ;
@@ -556,7 +576,7 @@ p {
     width: 50%;
     /* margin-top: rem; */
     background-color:white ;
-    border: 1px solid orange;
+    border: 2px solid #d68545;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem; 
 }
@@ -566,57 +586,87 @@ p {
     border-bottom-right-radius: 0.5rem; 
 }
 .logButton button:hover {
-    background-color: orange;
+    background-color: #db7622;
 }
-
-.logpage h2 ,.bookingPage h2 {
+.logpage h2 ,.bookingPage h2{
     font-weight: bold;
     font-size: 1.5em;
-    color: orange;
+    color: #db7622;
     text-align: center;
     margin-top: 1rem;
 }
-.logpage label,.bookingPage label {
+.logpage label,.bookingPage label{
     display: none;
 }
-.logpage input,.bookingPage input {
+.logpage input,.bookingPage input{
     width : 100%;
     margin: 0.5rem auto;
     border: none;
-    border-bottom: rgb(63, 62, 61) 1px solid;
+    border-bottom: #21537a 1px solid;
 }
 .logpage input[type='submit'],.bookingPage input[type='submit'] {
     display: block;
     width : 7rem;
     margin: 0.5rem auto;
-    border: 1px solid orange;
-    background-color: white;
+    border: 2px solid #db7622;
+    background-color: #d68545;
     border-radius: 0.5rem;
 }
 .logpage input[type='submit']:hover ,.bookingPage input[type='submit']:hover {
-    background-color: orange;
+    background-color: #db7622;
 }
-.logpage form,.bookingPage form {
-    margin: 1rem 2rem;
+.logpage form ,.bookingPage form  {
+  margin: 1rem auto;
+  width: 20rem;
+  border:#21537a 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 .bookingPage textarea {
     margin-top: 1rem;
     width: 100%;
 }
-
+/*===========CGV component=============*/
+.cgv {
+  width: 75%;
+  margin: 0 auto;
+}
+.cgv h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+.cgv ol li{
+  list-style: decimal;
+}
+.cgv h3 {
+  margin: 0.5rem auto;
+}
+.cgv p {
+  color: rgb(59, 59, 59);
+  display: block;
+  margin-bottom:1rem;
+}
 
 /*===========Footer component=============*/
 
 footer {
     margin: 1rem auto;
-    background-color: silver;
+    background-color: #21537a;
 }
 
 footer ul {
     text-align: center;
 }
+footer a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+  color: #db7622;
+}
 
 footer li {
+    color: white;
     width: 11rem;
     margin: 0 auto;
     padding: 1rem;
@@ -632,26 +682,28 @@ footer p {
 
 
 
-
 @media screen and (min-width: 900px) {
     .alert {
-
         margin-bottom: 0.5rem;
     }
     .flexProduit {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carte {
+      margin: 3rem 12rem;
     }
     .carte figure {
-        width: 18rem;
-        margin: 0 auto 1rem auto;
+        width: 25rem;
+        margin: 0 auto 2rem auto;
     }
     .carte h3 {
-        width: 85%;
+        width: 100%;
     }
     .carte img {
-        height: 13rem;
-        width: 18rem;
+        height: 17rem;
+        width: 25rem;
     }
 
 
@@ -661,7 +713,7 @@ footer p {
         margin: 1rem auto; 
     }
     .logpage .logButton button {
-        margin-top: 15rem;
+        
         width: 9.5rem;
         margin-right: 0.3rem;
     }
@@ -673,7 +725,7 @@ footer p {
         display: block;
     }
 
-    .logpage input,.bookingPage input {
+    .logpage input,.bookingPage input{
         width : 20rem;
         border: none;
         border-bottom: rgb(63, 62, 61) 1px solid;
@@ -681,17 +733,10 @@ footer p {
     .logpage input::placeholder ,.bookingPage input::placeholder {
         opacity: 0;
     }
-    .logpage input[type='submit'] ,.bookingPage input[type='submit'] {
+    .logpage input[type='submit'] ,.bookingPage input[type='submit']  {
         width : 10rem;
     }
-    .logpage form ,.bookingPage form {
-        margin: 1rem auto;
-        width: 20rem;
-        border: orange 1px solid;
-        padding: 1rem;
-        border-radius: 1rem;
-        margin-bottom: 20rem;
-    }
+
     footer ul {
         display: flex;
         flex-direction: row;
@@ -702,4 +747,3 @@ footer p {
         border-bottom: none;
     }
 }
-

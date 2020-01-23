@@ -16,9 +16,41 @@ export default class LogInForm extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault()
-        const logUser = {...this.state}
-        console.log(logUser)
-        logUser.email = ''
+        const post = JSON.stringify({
+            email:this.state.email,
+            password: this.state.password
+        })
+        const options = {
+            method: 'POST',
+            body : post,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        fetch('http://localhost:3050/user', options)
+            .then(async response => {
+                if (response.ok) {
+                    const data = await response.json()
+                    if (data.isAdmin) {
+                        //qui vaut true si bons identifiants
+                        this.props.isAuthenticated()
+                        // this.setState({ isAuthenticated : true})
+                        // console.log(this.state.isAuthenticated)
+                    }
+                    else {
+                        console.log('error auth')
+                    }
+                    
+                } else {
+                    console.error('server response : ' + response.status);
+                }   
+            }).catch(error => {
+                console.error(error);
+            });
+            
+        const logUser = { ...this.state }
+        // console.log(logUser)
         Object.keys(logUser)
             .forEach(input =>{
                 logUser[input] = ''
