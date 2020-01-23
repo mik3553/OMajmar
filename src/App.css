@@ -302,16 +302,24 @@ margin: 0;
   display: flex;
   justify-content: space-around;
   margin-bottom: 5%;
+  min-height: 25vh;
 }
 
 
 .btn-control {
- 
   background:  #db7622;
   color: whitesmoke;
   border:none;
-  
-  }
+  margin:10%;
+}
+
+.users-command p {
+/* border: 1px solid black; */
+margin: 0 11% 0 11%;
+text-align: justify;
+}
+
+
 
 
   /* .btn {
@@ -340,66 +348,43 @@ margin: 0;
 /* COMPOSANT EVENEMENT */
 
 
- .container-menu.btn{
-  margin: 0 0 0 0;
+.container-menu.btn{
+/* A REVOIR SE CONFONT AVEC LES BOUTONS DE L ACCUEIL */
+  margin-left: 1.1%;
   padding: 2.5% 0 0 0;
-  
-}
-.container-menu .btn{
-margin-left: 1.1%;
+  border: black 1px solid;
+ 
+ }
 
-}
 
-/* espace test  */
-
-img{
-  width: 375px;
-  height:250px; 
+figure{
+ width:380px;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  border: 1px solid black;
-  overflow: hidden;
+.figure-container {
+ height: 40vh;
+ text-transform: uppercase;
 }
 
-.carousel-slide {
-  display: flex;
-  
+.figcaption-name{
+   margin: 0 auto ;
+   text-align: center;
+   padding: 2% 0 2% 0 ;
 }
 
-
-.prevBtn {
-  position: absolute;
-  top: 30%;
-  z-index: 10;
-  left: 2%;
-  font-size: 30px;
-  /* color: white; */
-  /* color: #db7622; */
-  color:black;
-
-
-  opacity: 0.8;
-  cursor: pointer;
+.container-img{
 }
-.nextBtn {
-  position: absolute;
-  top: 30%;
-  z-index: 10;
-  right: 2%;
-  font-size: 30px;
-  /* color: white; */
 
-  /* color: #db7622; */
-  color:black;
-
-
-  opacity: 0.8;
-  cursor: pointer;
+figure img{
+width: 100%; 
 } 
+
+ul.slick-dots{
+ height:5vh;
+}
+
+
+
 
 /* //lorsque la largeur dépasse les 6OOpx    */
 @media only screen and (min-width: 600px) {
@@ -423,13 +408,6 @@ img{
     padding: 3% 0% 1% 0;
 
 
-    /* background:whitesmoke; */
-   
-
-    /* background:#f7c59f; */
-    /* background: whitesmoke; */
-    /* background: #FFFDF2; */
-    /* background: #fff2db; */
   }
 
   .toolbar_logo {
@@ -471,10 +449,6 @@ img{
 
   /* COMPOSANT ACCUEIL */
 
-  .landing-page {
-    /* background:#d68545; */
-
-  }
 
   .bg-image {
     margin-top: 9vh;
@@ -502,14 +476,7 @@ img{
     margin: 1% 0 1% 0;
   }
 
-  .users-command {
-
-  }
-
-  .btn-control {
-   
-  }
-
+ 
   /* SIDEBAR  Mobile  n'est pas visible */
 
   .toolbar_nav-aside {
@@ -517,47 +484,42 @@ img{
   }
 
   /* COMPOSANT EVENEMENT */
-  .header-event {
-    margin-bottom: 5%;
-    border: tomato 1px solid;
+
+  
+  .container-menu{
+    margin: 10% 0 5% 0;
+    width: 100%;
   }
 
-  .evenement h2 {
-    text-align: center;
-    border: 1px solid black;
-    padding: 5%;
+  .container-menu.btn{
+    margin-left: 1.1%;
+    padding: 2.5% 0 0 0;
+
   }
 
-  .evenement ul {
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
+
+
+ 
+
+
+  
+
+  .slick-prev:before, .slick-next:before {
+    /* font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;*/
+    color: black;
+    /*
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    border: 2px solid black;
   }
 
-  .container-mignardise,
-  .container-repas,
-  .container-gourmandise {
-    width: 40%;
-  }
 
-  .container-mignardise {
-    position: relative;
-    left: 5%;
-    border: yellow 1px solid;
-  }
-
-  .container-repas {
-    position: relative;
-    left: 55%;
-    border: blue 1px solid;
-  }
-
-  .container-gourmandise {
-    position: relative;
-    left: 5%;
-    border: red 1px solid;
-  }
 }
+
+
 
 /*==========générale=============*/
 /* body {

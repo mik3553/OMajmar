@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+
 // Nos components imports
 import Carte from './components/Carte'
 import LogPage from './components/LogPage'
 import Booking from './components/Booking'
 import Accueil from './components/Accueil'
 import Evenement from "./components/Evenement"
+
 // nos CSS
 import "./App.css";
 

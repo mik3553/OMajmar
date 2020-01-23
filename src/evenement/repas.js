@@ -2,7 +2,7 @@
 let repas = [
     {
         intitulé: "Tajine aux légumes",
-        picture: "oeuf.jpeg"
+        picture: "/oeuf.jpeg"
     },
 
     {
@@ -17,7 +17,7 @@ let repas = [
 
     {
         intitulé: "Tajine aux sardines",
-        picture: "tajine de sardine.jpg"
+        picture: "/tajine de sardine.jpg"
     },
 
     {

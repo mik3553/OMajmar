@@ -6,9 +6,6 @@ import Slider from "react-slick";
 
 
 
-
-
-
 class Mignardise extends Component {
     constructor(props) {
         super(props)
@@ -38,6 +35,13 @@ class Mignardise extends Component {
             arrows: true,
             slieToScroll: 1,
             className: "slides"
+
+            // dots: true,
+            // infinite: true,
+            // speed: 500,
+            // slidesToShow: 1,
+            // slidesToScroll: 1
+
         };
 
         return (
@@ -47,23 +51,16 @@ class Mignardise extends Component {
 
                         mignardises.map((mignardise) => {
                             return (
-                                <div key={mignardise.name} style={{ height: "20vh" }}>
-                                    {/* <img src={(`../images/${mignardise.picture}`)} alt={mignardise.name} /> */}
-
-                                    <img src={(`../images/${mignardise.picture}`)} style={{ width: "370px", heigth: "150px" }} />
-                                    <div className="description">
-                                        <h2 style={{ fontWeight: "bold" }}>{mignardise.name}</h2>
-                                        <p>Ingrédients :</p>
-                                        <p>Nombre de part : min - max</p>
-                                    </div>
-
-
+                                <div className="figure-container" key={mignardise.name}>
+                                    <figure style={{ height: "30vh" }}>
+                                        <img src={(`images${mignardise.picture}`)}
+                                            alt={mignardise.name} />
+                                        <figcaption className="figcaption-name">{mignardise.name}</figcaption>
+                                    </figure>
                                 </div>
                             )
-
                         }
                         )
-
                     }
                 </Slider>
 
@@ -75,10 +72,3 @@ class Mignardise extends Component {
 export default Mignardise
 
 
-{/* <img
-                                    src={"../images/" + mignardise.picture}
-                                    alt={mignardise.name}
-                                    style={{ width: "370px", heigth: "150px" }}
-                                /> */}
-{/* soit  */ }
-{/* <img src={`../images/${mignardise.picture}`} alt={mignardise.name} style={{ width: "370px", heigth: "150px" }} /> */ }

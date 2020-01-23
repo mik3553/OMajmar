@@ -31,15 +31,15 @@ export default class MenuEvenement extends Component {
 
     render() {
         return (
-            <Fragment>
-                <div className="container-menu btn" style={{ height: "7vh" }}>
 
-                    <button className="btn-control btn " >MIGNARDISES</button>
-                    <button className="btn-control btn " >REPAS</button>
-                    <button className="btn-control btn " >GOURMANDISES</button>
+            <div className="container-menu btn" style={{ height: "7vh" }}>
 
-                </div>
-            </Fragment >
+                <button className="btn-control btn " >MIGNARDISES</button>
+                <button className="btn-control btn " >REPAS</button>
+                <button className="btn-control btn " >GOURMANDISES</button>
+
+            </div>
+
         )
     }
 }

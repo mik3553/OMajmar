@@ -4,22 +4,22 @@ let gourmandises = [
 
     {
         intitulé: "Richbond marocain",
-        picture: "tajine de sardine"
+        picture: "/tajine de sardine.jpg"
     },
 
     {
         intitulé: "Cube de sésame garni",
-        picture: "tajine kefta"
+        picture: "/tajine kefta.jpg"
     },
 
     {
         intitulé: "Flan à la cannelle",
-        picture: "tajine de sardine"
+        picture: "/tajine de sardine.jpg"
     },
 
     {
         intitulé: "Brochette de fruits",
-        picture: "tajine kefta"
+        picture: "/tajine kefta.jpg"
     },
 
     {

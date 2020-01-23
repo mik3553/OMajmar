@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+
 import "../App.css";
 
 
@@ -15,7 +16,7 @@ export default class PageAccueil extends Component {
                     <div className="bg-image">
 
                         <img
-                            src={require("../images/photo-Accueil.jpg")}
+                            src={`images/photo-Accueil.jpg`}
                             alt="tajine_test"
                         />
                     </div>
@@ -27,21 +28,31 @@ export default class PageAccueil extends Component {
                     </div>
 
                     <div className="users-command container">
+                        <div className="partuculier-container">
+                            <button className="btn-particulier btn-control btn" type="submit">
+                                PARTICULIER ?
+                            </button>
+                            <p> ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quis odio consectetur ratione id eius iusto libero,
+                                    ?</p>
+                        </div>
 
-                        <button className="btn-particulier btn-control btn" type="submit">
-                            PARTICULIER ?
-                        </button>
                         <br />
-                        <button className="btn-entreprise btn-control btn" type="submit">
-                            ÉVÈNEMENTS ?
+                        <div className="espacePro-container">
+                            <button className="btn-entreprise btn-control btn" type="submit">
+                                ÉVÈNEMENTS ?
                         </button>
+                            <p> ipsum dolor sit amet consectetur adipisicing elit.
+                                     Quis odio consectetur ratione id eius iusto libero,
+                                    ?</p>
+                        </div>
 
                     </div>
                 </div>
 
                 <Footer />
 
-            </Fragment>
+            </Fragment >
 
         )
     }
