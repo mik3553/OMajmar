@@ -1,0 +1,122 @@
+
+/*===========adminForm component=============*/
+.adminLogIn h2{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #db7622;
+    text-align: center;
+    margin-top: 1rem;
+}
+.adminLogIn label,.bookingPage label{
+    display: none;
+}
+.adminLogIn input{
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: #21537a 1px solid;
+}
+.adminLogIn input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 2px solid #db7622;
+    background-color: #d68545;
+    border-radius: 0.5rem;
+}
+.adminLogIn input[type='submit']:hover {
+    background-color: #db7622;
+}
+.adminLogIn form  {
+  margin: 1rem auto;
+  width: 20rem;
+  border:#21537a 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.admin .adminCarte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 20rem;
+
+}
+  .admin .adminProducts {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+.admin .adminBooking {
+  margin: 2rem auto;
+}
+.admin .adminBooking h2 {
+  margin: 2rem;
+}
+.admin .adminBooking table {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.admin .adminBooking  td{
+  border: #21537a 1px solid;
+  padding: 0.50rem;
+  width: 10rem;
+}
+.admin form label {
+  display: none;
+}
+.admin form input {
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: #21537a 1px solid;
+}
+.admin form input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 2px solid #db7622;
+    background-color: #d68545;
+    border-radius: 0.5rem;
+}
+.admin form input[type='submit']:hover {
+    background-color: #db7622;
+}
+.admin form {
+  margin: 1rem auto;
+  width: 20rem;
+  border:#21537a 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.admin  h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #db7622;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 900px) {
+
+
+  .admin .adminForms {
+    display: flex;
+    justify-content: center;
+
+  }
+  .admin .adminForms article {
+    margin: 1rem 3rem;
+  }
+  .admin .bookingsBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .adminProducts {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+}

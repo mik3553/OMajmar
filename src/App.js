@@ -7,8 +7,10 @@ import Booking from './components/Booking'
 import Accueil from './components/Accueil'
 import Evenement from "./components/Evenement"
 import Cgv from "./components/Cgv"
+import Admin from "./components/AdminPages/Admin"
 // nos CSS
 import "./App.css";
+import './components/AdminPages/Admin.css'
 
 class App extends Component {
   render() {
@@ -21,6 +23,7 @@ class App extends Component {
             <Route path='/reservation' component={Booking} />
             <Route path='/evenements' component={Evenement} />
             <Route path='/cgv' component={Cgv} />
+            <Route path='/monsite/mesapplis/traiteur/devs/' component={Admin} />
           </Switch>
         </BrowserRouter>
     );

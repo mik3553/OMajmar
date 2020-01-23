@@ -1,86 +1,110 @@
 import React, { Component, Fragment } from 'react'
-import Footer from './Footer'
-import Produit from './Produit'
-
-//Nos données
-import entrees from '../carte/entrees'
-import plats from '../carte/plats'
-import desserts from '../carte/desserts'
 import Header from './Header'
+import Footer from './Footer'
 
+import ProduitEntree from './ProduitEntree'
+import ProduitPlat from './ProduitPlat'
+import ProduitDessert from './ProduitDessert'
+
+import Booking from './Booking'
 
 export default class Carte extends Component {
     constructor(props) {
         super(props)
-    
         this.state = {
              entrees : [],
              plats : [],
              desserts : []
         }
     }
- 
     componentDidMount(){
-        this.setState({entrees, plats, desserts })
+        // setInterval(() => {
+            this.getEntrees()
+            this.getPlats()
+            this.getDesserts()
+        // }, 5000);
+    }
+    getEntrees = () => {
+        fetch('http://localhost:3050/entrees')
+            .then(response => {
+                if (response.ok) {
+                    response.json()
+                        .then((response) => {
+                            console.log(response)
+                            this.setState({entrees : response})
+                        })
+                } else {
+                    console.error('server response : ' + response.status);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+    getPlats = () => {
+        fetch('http://localhost:3050/plats')
+            .then(response => {
+                if (response.ok) {
+                    response.json()
+                        .then((response) => {
+                            console.log(response)
+                            this.setState({ plats: response })
+                        })
+                } else {
+                    console.error('server response : ' + response.status);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+    getDesserts = () => {
+        fetch('http://localhost:3050/desserts')
+            .then(response => {
+                if (response.ok) {
+                    response.json()
+                        .then((response) => {
+                            console.log(response)
+                            this.setState({ desserts: response })
+                        })
+                } else {
+                    console.error('server response : ' + response.status);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
     render() {
-        
-        fetch('http://localhost:3050/entrees')
-            .then(response => {
-                console.log(response)
-                // if (response) {
-                //     response.json()
-                //     console.log(response.json())
-                // }
-            });
-        // fetch("https://brianboudrioux.fr/simplon/api/products")
-        //     .then(response => {
-        //         console.log(response)
-        //         if (response) {
-        //             response.json()
-        //                 .then((response) => {
-        //                     const film = response.map((item) => {
-        //                         console.log(item);  
-        //                     })
-        //                 })
-        //         } else {
-        //             console.error('server response : ' + response.status);
-        //         }
-        //     })
-        //     .catch(console.error)
-            
-
         const entrees = [...this.state.entrees]
             .map(entree => 
-                <Produit
+                <ProduitEntree
                     key={entree._id}
                     details = {entree}
                 />)
         const plats = [...this.state.plats]
             .map(plat =>
-                <Produit
+                <ProduitPlat
                     key={plat._id}
                     details={plat}
                 />)
         const desserts = [...this.state.desserts]
             .map(dessert =>
-                <Produit
+                <ProduitDessert
                     key={dessert._id}
                     details={dessert}
                 />)
         
-
         return (
-
             <Fragment>
                 <Header />
                 <section className='carte'>
                     <h2>Lunch Box</h2>
-                    <strong>Osez un voyage culinaire<br/>le temps d'une pause déjeuner</strong>
+                    <strong>Osez un voyage culinaire le temps d'une pause</strong>
                     <div className='flexCarte'>
                         <article>
-                            <h3>Entrées</h3>
+                            <h3>entrées</h3>
                             <div className='flexProduit' >
                                 {entrees}
                             </div>
@@ -101,9 +125,10 @@ export default class Carte extends Component {
                         </article>
                     </div>
                 </section>
+                <Booking />
                 <Footer />
+                
             </Fragment >
         )
     }
 }
-
