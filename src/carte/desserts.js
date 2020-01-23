@@ -4,7 +4,7 @@ const desserts = [
         title: 'Fondant au chocolat',
         image: 'oeufs.jpeg',
         ingredients: '450g d\'Épinards, 2 Pommes, 6 tranches de Bacon, 1 Oignon',
-        prix : 12
+        prix: 12
     },
     {
         _id: 2,

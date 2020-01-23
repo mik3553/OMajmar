@@ -1,4 +1,6 @@
+
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Footer extends Component {
     render() {
@@ -10,13 +12,13 @@ export default class Footer extends Component {
                             <a href='hotmail.com'><img src='' alt='' /></a>
                         </div>
                         <p>A propos</p>
-                        <p>CGV</p>
+                        <p><Link to='/cgv'>Conditions générale de vente</Link></p>
                         <p>Présentation</p>
                     </li>
                     <li>Livraison : 75,92,93</li>
                     <li>
                         <p>Contact :</p>
-                        <p><a href="mailto:omajmart@gamil.com">omajmart@gamil.com</a></p>
+                        <p><a href="mailto:omajmart@gmail.com">omajmart@gmail.com</a></p>
                         <p>Tel: (+33) 06.21.49.16.37 </p>
                     </li>
                 </ul>

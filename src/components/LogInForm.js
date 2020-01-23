@@ -1,10 +1,11 @@
+
 import React, { Component, Fragment } from 'react'
 
 export default class LogInForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            email   : '',
+            email: '',
             password: ''
         }
         this.handleChange = this.handleChange.bind(this)
@@ -16,14 +17,46 @@ export default class LogInForm extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault()
-        const logUser = {...this.state}
-        console.log(logUser)
-        logUser.email = ''
+        const post = JSON.stringify({
+            email: this.state.email,
+            password: this.state.password
+        })
+        const options = {
+            method: 'POST',
+            body: post,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        fetch('http://localhost:3050/user', options)
+            .then(async response => {
+                if (response.ok) {
+                    const data = await response.json()
+                    if (data.isAdmin) {
+                        //qui vaut true si bons identifiants
+                        this.props.isAuthenticated()
+                        // this.setState({ isAuthenticated : true})
+                        // console.log(this.state.isAuthenticated)
+                    }
+                    else {
+                        console.log('error auth')
+                    }
+
+                } else {
+                    console.error('server response : ' + response.status);
+                }
+            }).catch(error => {
+                console.error(error);
+            });
+
+        const logUser = { ...this.state }
+        // console.log(logUser)
         Object.keys(logUser)
-            .forEach(input =>{
+            .forEach(input => {
                 logUser[input] = ''
             })
-        this.setState({...logUser})
+        this.setState({ ...logUser })
     }
 
     render() {
@@ -33,17 +66,17 @@ export default class LogInForm extends Component {
                 <form className='signIn' onSubmit={this.handleSubmit}>
                     <fieldset>
                         <label>Email:</label>
-                        <input 
-                            type='email' 
-                            name='email' 
+                        <input
+                            type='email'
+                            name='email'
                             onChange={this.handleChange}
                             placeholder='email' />
                     </fieldset>
                     <fieldset>
                         <label>Mot de passe:</label>
-                        <input 
-                            type='password' 
-                            name='password' 
+                        <input
+                            type='password'
+                            name='password'
                             onChange={this.handleChange}
                             placeholder='Mot de passe' />
                     </fieldset>

@@ -1,29 +1,38 @@
-
 import React, { Component, Fragment } from 'react'
-import Header from './Header'
-import Footer from './Footer'
 
-import ProduitEntree from './ProduitEntree'
-import ProduitPlat from './ProduitPlat'
-import ProduitDessert from './ProduitDessert'
+import Header from '../Header'
+import Footer from '../Footer'
 
-import Booking from './Booking'
+import AdminFormEntree from './AdminFormEntree'
+import AdminFormPlat from './AdminFormPlat'
+import AdminFormDessert from './AdminFormDessert'
 
-export default class Carte extends Component {
+import AdminButtonDelete from './AdminButtonDelete'
+
+import AdminBooking from './AdminBooking'
+import LoginForm from '../LogInForm'
+
+import './Admin.css'
+
+
+export default class Admin extends Component {
     constructor(props) {
         super(props)
+    
         this.state = {
-            entrees: [],
-            plats: [],
-            desserts: []
+             bookings:[],
+             entrees:[],
+             plats:[],
+             desserts:[],
+             isAdmin : false
         }
     }
-    componentDidMount() {
-        // setInterval(() => {
-        this.getEntrees()
-        this.getPlats()
-        this.getDesserts()
-        // }, 5000);
+
+    componentDidMount(){
+            this.getBookings()
+            this.getEntrees()
+            this.getPlats()
+            this.getDesserts()
     }
     getEntrees = () => {
         fetch('http://localhost:3050/entrees')
@@ -76,60 +85,86 @@ export default class Carte extends Component {
                 console.log(error);
             })
     }
-
+    
+    getBookings(){
+        fetch('http://localhost:3050/bookings')
+        .then(response => {
+            response.json()
+            .then(response =>{
+                this.setState({bookings : response})
+            })
+            .catch((error) => {
+                console.log(error);
+            }) 
+        })
+    }
+    getAuthenticated(){
+        this.setState({isAdmin:true})
+    }
+    //URGENT A REVOIR SI SESSIONS UTILISATEUR MARCHE
+    logOut(){
+        this.setState({ isAdmin: false })
+    }
+    
     render() {
+        if (!this.state.isAdmin){
+            return  <section className='adminLogIn'>
+                        <LoginForm 
+                            isAuthenticated={()=>this.getAuthenticated()}/>
+                    </section>
+        }
         const entrees = [...this.state.entrees]
             .map(entree =>
-                <ProduitEntree
+                <AdminButtonDelete
                     key={entree._id}
                     details={entree}
                 />)
         const plats = [...this.state.plats]
             .map(plat =>
-                <ProduitPlat
+                <AdminButtonDelete
                     key={plat._id}
                     details={plat}
                 />)
         const desserts = [...this.state.desserts]
             .map(dessert =>
-                <ProduitDessert
+                <AdminButtonDelete
                     key={dessert._id}
                     details={dessert}
                 />)
 
+        const bookings = this.state.bookings
+            .map(booking =>
+                (
+                    <AdminBooking
+                        key={booking._id}
+                        details={booking}
+                    />
+                )
+            )
         return (
             <Fragment>
                 <Header />
-                <section className='carte'>
-                    <h2>Lunch Box</h2>
-                    <strong>Osez un voyage culinaire le temps d'une pause</strong>
-                    <div className='flexCarte'>
-                        <article>
-                            <h3>entrées</h3>
-                            <div className='flexProduit' >
-                                {entrees}
-                            </div>
-                        </article>
-
-                        <article>
-                            <h3>plat</h3>
-                            <div className='flexProduit' >
-                                {plats}
-                            </div>
-                        </article>
-
-                        <article>
-                            <h3>déssert</h3>
-                            <div className='flexProduit' >
-                                {desserts}
-                            </div>
-                        </article>
+                <section className='admin'>
+                        {/* <button onClick={this.logOut} >Déconnexion</button> */}
+                    <div className='adminForms' >
+                        <AdminFormEntree />
+                        <AdminFormPlat />
+                        <AdminFormDessert />
                     </div>
+                    <div className='adminCarte'>
+                        {entrees}
+                        {plats}
+                        {desserts}
+                    </div>
+                    <article>
+                        <h2>Message clients</h2>
+                        <div className='bookingsBox'>
+                            {bookings}
+                        </div>
+                    </article>
                 </section>
-                <Booking />
                 <Footer />
-
-            </Fragment >
+            </Fragment>
         )
     }
 }
