@@ -1,0 +1,87 @@
+.carte {
+  margin: 2rem auto;
+}
+.carte h2 {
+    margin: 0.5rem;
+    text-transform: uppercase;
+    color:#db7622;
+    font-weight: 900;
+    text-align: center;
+}
+.carte strong {
+    display: block;
+    color: #d68545;
+    font-weight: 600;
+    text-align: center;
+}
+.carte h3 {
+    padding-bottom: 0.5rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    color: #21537a;
+    text-align: center;
+    border-bottom: 2px solid  #21537a;
+    width: 17rem;
+    margin: 2rem auto;
+}
+.carte figure {
+  text-align: center;
+    width: 16rem;
+    margin: 0 auto 1rem auto;
+    /* border-bottom: 1px dashed black; */
+     border: 1px rgb(187, 182, 182) solid;
+     box-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
+     background-color: whitesmoke;
+}
+.carte p{
+    margin: 0 0 0.5rem 0.5rem;
+    color:rgb(47, 46, 46);
+}
+.carte figcaption {
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
+    font-weight: 600;
+    display: block;
+    margin: 0 0 0.5rem 0.5rem;
+}
+.carte span {
+    color: black;
+    display: block;
+    margin: 0 0 0.5rem 0.5rem;
+}
+.carte button {
+    display: block;
+    margin: 0 auto 0.5rem auto; 
+}
+.carte img {
+    width: 16rem;
+}
+
+
+@media screen and (min-width: 900px) {
+    .alert {
+        margin-bottom: 0.5rem;
+    }
+    .flexProduit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carte {
+      margin: 3rem 12rem;
+    }
+    .carte figure {
+        width: 25rem;
+        margin: 0 auto 2rem auto;
+    }
+    .carte h3 {
+        width: 100%;
+    }
+    .carte img {
+        height: 17rem;
+        width: 25rem;
+    }
+
+}
+
