@@ -7,7 +7,9 @@ import AdminFormEntree from './AdminFormEntree'
 import AdminFormPlat from './AdminFormPlat'
 import AdminFormDessert from './AdminFormDessert'
 
-import AdminButtonDelete from './AdminButtonDelete'
+import AdminEntreestDelete from './AdminEntreestDelete'
+import AdminDessertstDelete from './AdminDessertstDelete'
+import AdminPlatsDelete from './AdminPlatstDelete'
 
 import AdminBooking from './AdminBooking'
 import LoginForm from '../LogInForm'
@@ -113,21 +115,22 @@ export default class Admin extends Component {
                             isAuthenticated={()=>this.getAuthenticated()}/>
                     </section>
         }
+
         const entrees = [...this.state.entrees]
             .map(entree =>
-                <AdminButtonDelete
+                <AdminEntreestDelete
                     key={entree._id}
                     details={entree}
                 />)
         const plats = [...this.state.plats]
             .map(plat =>
-                <AdminButtonDelete
+                <AdminPlatsDelete
                     key={plat._id}
                     details={plat}
                 />)
         const desserts = [...this.state.desserts]
             .map(dessert =>
-                <AdminButtonDelete
+                <AdminDessertstDelete
                     key={dessert._id}
                     details={dessert}
                 />)
@@ -151,11 +154,17 @@ export default class Admin extends Component {
                         <AdminFormPlat />
                         <AdminFormDessert />
                     </div>
-                    <div className='adminCarte'>
-                        {entrees}
-                        {plats}
-                        {desserts}
-                    </div>
+                    <article className='adminCarte'>
+                        <div className='adminProduct'>
+                            {entrees}
+                        </div>
+                        <div className='adminProduct'>
+                            {plats}
+                        </div>
+                        <div className='adminProduct'>
+                            {desserts}
+                        </div>
+                    </article>
                     <article>
                         <h2>Message clients</h2>
                         <div className='bookingsBox'>

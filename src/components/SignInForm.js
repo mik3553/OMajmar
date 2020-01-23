@@ -11,8 +11,8 @@ export default class SignInForm extends Component {
             password  :'',
             passwordC :''
         }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        // this.handleChange = this.handleChange.bind(this)
+        // this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange = (event) => {
         const {name, value} = event.target
