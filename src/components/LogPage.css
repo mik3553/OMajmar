@@ -1,0 +1,85 @@
+.logButton {
+    margin: 0 2rem; 
+}
+.logButton button {
+    width: 50%;
+    /* margin-top: rem; */
+    background-color:white ;
+    border: 2px solid #d68545;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+}
+.logButton button:last-of-type{
+    border-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; 
+}
+.logButton button:hover {
+    background-color: #db7622;
+}
+.logpage h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #db7622;
+    text-align: center;
+    margin-top: 1rem;
+}
+.logpage label {
+    display: none;
+}
+.logpage input{
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: #21537a 1px solid;
+}
+.logpage input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 2px solid #db7622;
+    background-color: #d68545;
+    border-radius: 0.5rem;
+}
+.logpage input[type='submit']:hover {
+    background-color: #db7622;
+}
+.logpage form {
+  margin: 1rem auto;
+  width: 20rem;
+  border:#21537a 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+
+    .logpage .logButton {
+        width: 20rem;
+        margin: 1rem auto; 
+    }
+    .logpage .logButton button {
+        
+        width: 9.5rem;
+        margin-right: 0.3rem;
+    }
+    .logpage .logButton button:last-of-type {
+        width: 9.5rem;
+        margin-left: 0.3rem;
+    }
+    .logpage label,.bookingPage label {
+        display: block;
+    }
+
+    .logpage input,.bookingPage input{
+        width : 20rem;
+        border: none;
+        border-bottom: rgb(63, 62, 61) 1px solid;
+    }
+    .logpage input::placeholder ,.bookingPage input::placeholder {
+        opacity: 0;
+    }
+    .logpage input[type='submit'] ,.bookingPage input[type='submit']  {
+        width : 10rem;
+    }
+}

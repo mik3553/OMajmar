@@ -1,0 +1,38 @@
+.bookingPage h2{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #db7622;
+    text-align: center;
+    margin-top: 1rem;
+}
+.bookingPage label{
+    display: none;
+}
+.bookingPage input{
+    width : 100%;
+    margin: 0.5rem auto;
+    border: none;
+    border-bottom: #21537a 1px solid;
+}
+.bookingPage input[type='submit'] {
+    display: block;
+    width : 7rem;
+    margin: 0.5rem auto;
+    border: 2px solid #db7622;
+    background-color: #d68545;
+    border-radius: 0.5rem;
+}
+.bookingPage input[type='submit']:hover {
+    background-color: #db7622;
+}
+.bookingPage form  {
+  margin: 1rem auto;
+  width: 20rem;
+  border:#21537a 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.bookingPage textarea {
+    margin-top: 1rem;
+    width: 100%;
+}

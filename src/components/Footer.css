@@ -1,0 +1,42 @@
+footer {
+    margin: 1rem auto;
+    background-color: #21537a;
+}
+
+footer ul {
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+  color: #db7622;
+}
+
+footer li {
+    color: white;
+    width: 11rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: black solid 1px;
+}
+footer li:last-of-type {
+    border-bottom:none;
+}
+footer p {
+    margin: 0.5rem auto;
+}
+
+
+@media screen and (min-width: 900px) {
+    footer ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer li {
+        border-bottom: none;
+    }
+}

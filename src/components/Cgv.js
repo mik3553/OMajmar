@@ -3,6 +3,8 @@ import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+import './Cgv.css'
+
 export default class Cgv extends Component {
     render() {
         return (
