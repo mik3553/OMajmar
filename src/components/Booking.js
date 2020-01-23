@@ -1,7 +1,9 @@
-
 import React, { Component, Fragment } from 'react'
 import Header from "./Header";
 import Footer from "./Footer";
+
+import './Booking.css'
+
 
 export default class Booking extends Component {
     constructor(props) {
