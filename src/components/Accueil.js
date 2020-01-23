@@ -20,9 +20,11 @@ export default class PageAccueil extends Component {
                             alt="tajine_test"
                         />
                     </div>
-                    <div className="control-horaires">
+                    <div className="control-content">
                         <p> <span>" </span> Texte de présentation: qui sommes nous ? que faisons nous ?
-                            quel est notre manifeste ?<span> "</span>
+                            quel est notre manifeste ?  This HTML file is a template. If you open it directly in the browser, you will see an empty page.
+                            You can add webfonts, meta tags, or analytics to this file.
+                            The build step will place the bundled scripts into the <span> "</span>
                         </p>
 
                     </div>
@@ -34,6 +36,8 @@ export default class PageAccueil extends Component {
                             </button>
                             <p> ipsum dolor sit amet consectetur adipisicing elit.
                                  Quis odio consectetur ratione id eius iusto libero,
+                                    ?ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quis odio consectetur ratione id eius iusto libero,
                                     ?</p>
                         </div>
 
@@ -44,6 +48,8 @@ export default class PageAccueil extends Component {
                         </button>
                             <p> ipsum dolor sit amet consectetur adipisicing elit.
                                      Quis odio consectetur ratione id eius iusto libero,
+                                    ?ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quis odio consectetur ratione id eius iusto libero,
                                     ?</p>
                         </div>
 

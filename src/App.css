@@ -147,13 +147,9 @@ body {
 }
 
 .toolbar {
-  /* position: 0;
-  top: 0;
-  left: 0; */
-  width: 100%;
-  /* height: 5vh; */
 
-  /* background: grey; */
+  width: 100%;
+
 }
 
 .toolbar_logo {
@@ -287,13 +283,13 @@ body {
 }
 
 /* Contenu à l'accueil */
-.control-horaires {
+.control-content {
 padding: 7%;
 text-align: justify;
 margin: 0;
 }
 
-.control-horaires span {
+.control-content span {
   font-size: 1.5rem;
   color: #db7622;
 }
@@ -339,7 +335,7 @@ text-align: justify;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-} */
+  } */
 
 
 
@@ -395,9 +391,10 @@ ul.slick-dots{
 
   .toolbar {
     position: fixed;
+    top : 0;
     height: 5vh;
     padding: 0% 0% 5% 0;
-    border-bottom: solid 0.2px;
+
   }
 
   .toolbar_navigation {
@@ -473,9 +470,20 @@ ul.slick-dots{
     letter-spacing: 0.7rem;
   }
 
-  .control-horaires {
-    margin: 1% 0 1% 0;
+  .control-content  {
+    height: 20vh;
+    padding:3% 10% 0 10%;
+    /* border: solid black 2px; */
+    text-align: center;
   }
+
+  .control-content p{
+    /* height: 15vh */
+    font-size: 1.5rem;
+    color: black;
+  }
+
+
 
  
   /* SIDEBAR  Mobile  n'est pas visible */
