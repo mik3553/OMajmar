@@ -1,8 +1,7 @@
 import React from 'react'
 import './Admin.css'
 
-
-const AdminButtonDelete = ({details}) => {
+const AdminEntreestDelete = ({details}) => {
             const handleDelete = () => {
             const idTodelete = JSON.stringify({
                 _id: details._id,
@@ -37,4 +36,4 @@ const AdminButtonDelete = ({details}) => {
     )
 }
 
-export default AdminButtonDelete
+export default AdminEntreestDelete

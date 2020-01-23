@@ -34,19 +34,15 @@
   padding: 1rem;
   border-radius: 1rem;
 }
-.admin .adminCarte {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto;
-  width: 20rem;
 
+
+.admin .adminProducts {
+  display: flex;
+  justify-content: space-between;
 }
-  .admin .adminProducts {
-    display: flex;
-    justify-content: space-between;
-    
-  }
+.admin .adminProduct {
+  width: 33%;
+}
 .admin .adminBooking {
   margin: 2rem auto;
 }
@@ -117,6 +113,18 @@
     display: flex;
     flex-direction: row;
 
+  }
+  .admin .adminCarte {
+    display: flex;
+    margin: 1rem auto;
+    width:80%;
+  }
+  .admin .adminCarte div {
+    border: #21537a 1px solid;
+    margin: 0.5rem 1rem;
+  }
+  .admin .adminProduct {
+    width: 33%;
   }
 
 }
