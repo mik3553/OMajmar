@@ -4,7 +4,7 @@ const plats = [
         title: 'Oeufs aux plats',
         image: 'oeufs.jpeg',
         ingredients: '450g d\'Épinards, 2 Pommes, 6 tranches de Bacon, 1 Oignon',
-        prix : 18
+        prix: 18
     },
     {
         _id: 2,

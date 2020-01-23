@@ -12,20 +12,20 @@ import Header from './Header'
 export default class Carte extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             entrees : [],
-             plats : [],
-             desserts : []
+            entrees: [],
+            plats: [],
+            desserts: []
         }
     }
- 
-    componentDidMount(){
-        this.setState({entrees, plats, desserts })
+
+    componentDidMount() {
+        this.setState({ entrees, plats, desserts })
     }
 
     render() {
-        
+
         // fetch('http://localhost:3050/entrees', { mode: 'no-cors' })
         //     .then(response => {
         //         console.log(response)
@@ -50,13 +50,13 @@ export default class Carte extends Component {
         //         }
         //     })
         //     .catch(console.error)
-            
+
 
         const entrees = [...this.state.entrees]
-            .map(entree => 
+            .map(entree =>
                 <Produit
                     key={entree._id}
-                    details = {entree}
+                    details={entree}
                 />)
         const plats = [...this.state.plats]
             .map(plat =>
@@ -70,7 +70,7 @@ export default class Carte extends Component {
                     key={dessert._id}
                     details={dessert}
                 />)
-        
+
 
         return (
 
@@ -78,7 +78,7 @@ export default class Carte extends Component {
                 <Header />
                 <section className='carte'>
                     <h2>Lunch Box</h2>
-                    <strong>Osez un voyage culinaire<br/>le temps d'une pause déjeuner</strong>
+                    <strong>Osez un voyage culinaire<br />le temps d'une pause déjeuner</strong>
                     <div className='flexCarte'>
                         <article>
                             <h3>Entrées</h3>
