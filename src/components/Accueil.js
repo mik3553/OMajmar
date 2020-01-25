@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react'
+
+
 import Header from './Header'
 import Footer from './Footer'
+
+import { Link } from 'react-router-dom'
 
 
 import "../App.css";
@@ -23,8 +27,7 @@ export default class PageAccueil extends Component {
                     <div className="control-content">
                         <p> <span>" </span> Texte de présentation: qui sommes nous ? que faisons nous ?
                             quel est notre manifeste ?  This HTML file is a template. If you open it directly in the browser, you will see an empty page.
-                            You can add webfonts, meta tags, or analytics to this file.
-                            The build step will place the bundled scripts into the <span> "</span>
+                            You can add webfonts, meta tags, e <Link to={"/evenements"}> <span style={{ cursor: "pointer", fontSize: "1rem" }} >  + d'infos </span></Link> <span> "</span>
                         </p>
 
                     </div>
@@ -32,25 +35,24 @@ export default class PageAccueil extends Component {
                     <div className="users-command container">
                         <div className="partuculier-container">
                             <button className="btn-particulier btn-control btn" type="submit">
-                                PARTICULIER ?
+                                <Link to="/menus" style={{ textDecoration: "none", color: "whitesmoke" }}> PARTICULIER ?</Link>
                             </button>
                             <p> ipsum dolor sit amet consectetur adipisicing elit.
                                  Quis odio consectetur ratione id eius iusto libero,
-                                    ?ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quis odio consectetur ratione id eius iusto libero,
-                                    ?</p>
+                                    ?
+
+                              </p>
                         </div>
 
                         <br />
                         <div className="espacePro-container">
                             <button className="btn-entreprise btn-control btn" type="submit">
-                                ÉVÈNEMENTS ?
-                        </button>
+                                <Link to={"/evenements"} style={{ textDecoration: "none", color: "whitesmoke" }}> ÉVÈNEMENTS ?</Link>
+                            </button>
                             <p> ipsum dolor sit amet consectetur adipisicing elit.
                                      Quis odio consectetur ratione id eius iusto libero,
-                                    ?ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quis odio consectetur ratione id eius iusto libero,
-                                    ?</p>
+                                    ?
+                                </p>
                         </div>
 
                     </div>

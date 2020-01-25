@@ -1,42 +1,42 @@
 
 let repas = [
     {
-        intitulé: "Tajine aux légumes",
-        picture: "/oeuf.jpeg"
-    },
-
-    {
-        intitulé: "Tajine au poulet et ses olives",
-        picture: ""
-    },
-
-    {
-        intitulé: "Tajine de veau et ses pruneaux",
-        picture: ""
-    },
-
-    {
-        intitulé: "Tajine aux sardines",
+        name: "Tajine aux légumes",
         picture: "/tajine de sardine.jpg"
     },
 
     {
-        intitulé: "Tajine Kefta",
+        name: "Tajine au poulet et ses olives",
         picture: ""
     },
 
     {
-        intitulé: "Lentille à la marocaine",
+        name: "Tajine de veau et ses pruneaux",
         picture: ""
     },
 
     {
-        intitulé: "Haricot blanc à la marocaine",
+        name: "Tajine aux sardines",
+        picture: "/tajine de sardine.jpg"
+    },
+
+    {
+        name: "Tajine Kefta",
         picture: ""
     },
 
     {
-        intitulé: "Velouté d'orient",
+        name: "Lentille à la marocaine",
+        picture: ""
+    },
+
+    {
+        name: "Haricot blanc à la marocaine",
+        picture: ""
+    },
+
+    {
+        name: "Velouté d'orient",
         picture: ""
     }
 
