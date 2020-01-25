@@ -9,6 +9,8 @@ import ProduitDessert from './ProduitDessert'
 
 import Booking from './Booking'
 
+import './Carte.css'
+
 export default class Carte extends Component {
     constructor(props) {
         super(props)

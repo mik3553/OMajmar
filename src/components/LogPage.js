@@ -4,6 +4,8 @@ import Footer from '../components/Footer'
 import SignInForm from '../components/SignInForm'
 import LogInForm from '../components/LogInForm'
 
+import './LogPage.css'
+
 
 export default class LogPage extends Component {
     constructor(props) {

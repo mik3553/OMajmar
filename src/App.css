@@ -547,17 +547,25 @@ ul.slick-dots{
 
 
 
-/*==========générale=============*/
-/* body {
-    background-color: rgb(240, 211, 116);
-} */
-p {
-    color: grey;
+/*==========générale abdel=============*/
 
+h2 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 600;
+  color: #db7622;
 }
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight:600;
+}
+p {
+    color: white;
+}
+
+
 .alert {
     font-size: 0.7em;
-    color:orange;
+    color: #db7622;
     margin-top: -0.4rem;
 }
 .green {
@@ -566,216 +574,6 @@ p {
     margin-top: -0.4rem;
 }
 .required {
-    color:orangered
+    color: #db7622;
 }
-
-
-/*===========Carte component=============*/
-
-.carte h2 {
-    margin: 0.5rem;
-    text-transform: uppercase;
-    color:orangered;
-    text-align: center;
-}
-.carte strong {
-    display: block;
-    color: orange;
-    text-align: center;
-}
-.carte h3 {
-    padding-bottom: 0.5rem;
-    margin: 1rem auto;
-    text-transform: uppercase;
-    color: goldenrod;
-    text-align: center;
-    border-bottom: 2px solid goldenrod;;
-    width: 17rem;
-    margin: 2rem auto;
-}
-.carte figure {
-    width: 16rem;
-    margin: 0 auto 1rem auto;
-    /* border-bottom: 1px dashed black; */
-     border: 2px orange solid;
-}
-.carte p{
-    margin: 0 0 0.5rem 0.5rem;
-    color:grey;
-}
-.carte span, figcaption {
-    display: block;
-    margin: 0 0 0.5rem 0.5rem;
-}
-.carte button {
-    display: block;
-    margin: 0 auto 0.5rem auto; 
-}
-.carte img {
-    
-    width: 16rem;
-}
-/*===========LogPage component=============*/
-/* .logpage {
-    background-color: #F2C078 ;
-} */
-.logButton {
-    margin: 0 2rem; 
-}
-.logButton button {
-    width: 50%;
-    /* margin-top: rem; */
-    background-color:white ;
-    border: 1px solid orange;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem; 
-}
-.logButton button:last-of-type{
-    border-radius: 0;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem; 
-}
-.logButton button:hover {
-    background-color: orange;
-}
-
-.logpage h2 ,.bookingPage h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: orange;
-    text-align: center;
-    margin-top: 1rem;
-}
-.logpage label,.bookingPage label {
-    display: none;
-}
-.logpage input,.bookingPage input {
-    width : 100%;
-    margin: 0.5rem auto;
-    border: none;
-    border-bottom: rgb(63, 62, 61) 1px solid;
-}
-.logpage input[type='submit'],.bookingPage input[type='submit'] {
-    display: block;
-    width : 7rem;
-    margin: 0.5rem auto;
-    border: 1px solid orange;
-    background-color: white;
-    border-radius: 0.5rem;
-}
-.logpage input[type='submit']:hover ,.bookingPage input[type='submit']:hover {
-    background-color: orange;
-}
-.logpage form,.bookingPage form {
-    margin: 1rem 2rem;
-}
-.bookingPage textarea {
-    margin-top: 1rem;
-    width: 100%;
-}
-
-
-/*===========Footer component=============*/
-
-footer {
-    margin: 1rem auto;
-    background: #21537a;
-
-}
-
-footer ul {
-    text-align: center;
-    color: whitesmoke;
-}
-
-footer li {
-    width: 11rem;
-    margin: 0 auto;
-    padding: 1rem;
-    border-bottom: black solid 1px;
-}
-footer li:last-of-type {
-    border-bottom:none;
-
-}
-footer p {
-    margin: 0.5rem auto;
-    color: whitesmoke;
-
-}
-
-
-
-
-
-@media screen and (min-width: 900px) {
-    .alert {
-
-        margin-bottom: 0.5rem;
-    }
-    .flexProduit {
-        display: flex;
-        justify-content: space-between;
-    }
-    .carte figure {
-        width: 18rem;
-        margin: 0 auto 1rem auto;
-    }
-    .carte h3 {
-        width: 85%;
-    }
-    .carte img {
-        height: 13rem;
-        width: 18rem;
-    }
-
-
-
-    .logpage .logButton {
-        width: 20rem;
-        margin: 1rem auto; 
-    }
-    .logpage .logButton button {
-        margin-top: 15rem;
-        width: 9.5rem;
-        margin-right: 0.3rem;
-    }
-    .logpage .logButton button:last-of-type {
-        width: 9.5rem;
-        margin-left: 0.3rem;
-    }
-    .logpage label,.bookingPage label {
-        display: block;
-    }
-
-    .logpage input,.bookingPage input {
-        width : 20rem;
-        border: none;
-        border-bottom: rgb(63, 62, 61) 1px solid;
-    }
-    .logpage input::placeholder ,.bookingPage input::placeholder {
-        opacity: 0;
-    }
-    .logpage input[type='submit'] ,.bookingPage input[type='submit'] {
-        width : 10rem;
-    }
-    .logpage form ,.bookingPage form {
-        margin: 1rem auto;
-        width: 20rem;
-        border: orange 1px solid;
-        padding: 1rem;
-        border-radius: 1rem;
-        margin-bottom: 20rem;
-    }
-    footer ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    footer li {
-        border-bottom: none;
-    }
-}
-
 

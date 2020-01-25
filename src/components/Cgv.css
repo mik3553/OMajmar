@@ -1,0 +1,20 @@
+/*===========CGV component=============*/
+.cgv {
+  width: 75%;
+  margin: 0 auto;
+}
+.cgv h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+.cgv ol li{
+  list-style: decimal;
+}
+.cgv h3 {
+  margin: 0.5rem auto;
+}
+.cgv p {
+  color: rgb(59, 59, 59);
+  display: block;
+  margin-bottom:1rem;
+}
