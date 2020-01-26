@@ -14,15 +14,6 @@ const AdminEntreestDelete = ({details}) => {
                 }
             }
             fetch('http://localhost:3050/entree', options)
-                .then(response => {
-                    if (response.ok) {
-                        console.log(response)
-                    } else {
-                        console.error('server response : ' + response.status);
-                    }
-                }).catch(error => {
-                    console.error(error);
-                });
         }
     return (
         <div className='adminProducts'>

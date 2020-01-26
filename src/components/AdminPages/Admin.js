@@ -20,7 +20,6 @@ import './Admin.css'
 export default class Admin extends Component {
     constructor(props) {
         super(props)
-    
         this.state = {
              bookings:[],
              entrees:[],
@@ -42,11 +41,8 @@ export default class Admin extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ entrees: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
@@ -59,11 +55,8 @@ export default class Admin extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ plats: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
@@ -76,18 +69,14 @@ export default class Admin extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ desserts: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
                 console.log(error);
             })
     }
-    
     getBookings(){
         fetch('http://localhost:3050/bookings')
         .then(response => {

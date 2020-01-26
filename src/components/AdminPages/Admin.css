@@ -7,7 +7,7 @@
     text-align: center;
     margin-top: 1rem;
 }
-.adminLogIn label,.bookingPage label{
+.adminLogIn label{
     display: none;
 }
 .adminLogIn input{
@@ -94,7 +94,7 @@
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
 
 
   .admin .adminForms {

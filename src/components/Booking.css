@@ -1,9 +1,12 @@
+.bookingPage {
+    margin: 1rem auto;
+}
 .bookingPage h2{
     font-weight: bold;
     font-size: 1.5em;
     color: #db7622;
     text-align: center;
-    margin-top: 1rem;
+    padding: 1rem ;
 }
 .bookingPage label{
     display: none;
@@ -26,7 +29,8 @@
     background-color: #db7622;
 }
 .bookingPage form  {
-  margin: 1rem auto;
+  padding: 1rem auto;
+  margin: 0 auto;
   width: 20rem;
   border:#21537a 1px solid;
   padding: 1rem;
@@ -35,4 +39,32 @@
 .bookingPage textarea {
     margin-top: 1rem;
     width: 100%;
+}
+
+
+@media screen and (min-width: 1025px){
+    /* .bookingPage {
+        background-image: url('/images/reservation.JPG');
+        background-size: cover;
+    } */
+    .bookingPage{
+        padding-top: 5rem ;
+        padding-bottom: 5rem ;
+    }
+    .bookingPage label {
+        display: block;
+        
+    }
+    /* .bookingPage input{
+        opacity: 0.2;
+    }
+    .bookingPage textarea{
+        opacity: 0.2;
+    } */
+    .bookingPage input::placeholder {
+        opacity: 0;
+    }
+    .bookingPage input[type='submit']  {
+        width : 10rem;
+    }
 }

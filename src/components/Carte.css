@@ -1,28 +1,40 @@
 .carte {
-  margin: 2rem auto;
+  margin: 2rem 1rem;
+  font-family: 'Handlee', cursive;
 }
 .carte h2 {
     margin: 0.5rem;
-    text-transform: uppercase;
     color:#db7622;
     font-weight: 900;
+    font-size: 2em;
+    font-style: oblique;
     text-align: center;
 }
+
 .carte strong {
     display: block;
     color: #d68545;
+    font-size: 1.2em;
     font-weight: 600;
     text-align: center;
 }
+.carte article {
+    background-color:beige;
+    padding: 0.5rem;
+    margin: 2rem auto;
+}
 .carte h3 {
-    padding-bottom: 0.5rem;
-    margin: 1rem auto;
-    text-transform: uppercase;
+    padding: 0.5rem 0;
+    margin: 0 auto 1rem auto;
+    font-style: oblique;
+    font-size: 1.3em;
+    font-weight: 900;
     color: #21537a;
     text-align: center;
+    border-top: 2px solid  #21537a;
     border-bottom: 2px solid  #21537a;
-    width: 17rem;
-    margin: 2rem auto;
+    width: 100%;
+    background-color: whitesmoke;
 }
 .carte figure {
   text-align: center;
@@ -33,22 +45,18 @@
      box-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
      background-color: whitesmoke;
 }
-.carte p{
-    margin: 0 0 0.5rem 0.5rem;
-    color:rgb(47, 46, 46);
-}
 .carte figcaption {
+    padding-top: 0.5rem;
     color: black;
-    text-transform: uppercase;
-    text-shadow: 1px 0.5px 0.5px 0.5px rgb(187, 182, 182);
     font-weight: 600;
-    display: block;
-    margin: 0 0 0.5rem 0.5rem;
+}
+.carte p{
+    margin: 0.5rem 2rem;
+    color:rgb(19, 19, 19);
 }
 .carte span {
     color: black;
-    display: block;
-    margin: 0 0 0.5rem 0.5rem;
+    margin: 0 auto 0.5rem auto;
 }
 .carte button {
     display: block;
@@ -58,29 +66,49 @@
     width: 16rem;
 }
 
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 500px) and (max-width: 1024px){
+    .carte {
+      margin: 2rem 6rem;
+    }
+     .carte figure {
+        width: 16rem;
+        
+    }
+     .carte img {
+        
+        width: 16rem;
+    }
+        .flexProduit {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 1025px) {
     .alert {
         margin-bottom: 0.5rem;
     }
     .flexProduit {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        /* justify-content: space-; */
     }
     .carte {
-      margin: 3rem 12rem;
+      margin: 2rem 8rem;
     }
     .carte figure {
-        width: 25rem;
-        margin: 0 auto 2rem auto;
+        width: 23rem;
     }
     .carte h3 {
         width: 100%;
     }
     .carte img {
         height: 17rem;
-        width: 25rem;
+        width: 23rem;
+    }
+    @media screen and (min-width: 1800px){
+        .carte {
+            margin: 2rem 20rem;
+        }
     }
 
 }
