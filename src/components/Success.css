@@ -1,0 +1,28 @@
+.success {
+    width: 20rem;
+    height: 10rem;
+    position: fixed;
+    top:15rem;
+    left: 50%;
+    margin-left: -10rem;
+    background-color: grey;
+    opacity: 0.9;
+    border-radius: 1rem;
+}
+.success p{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin: 3rem;
+}
+.success span {
+    float: right;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.success span:hover{
+    background-color: #db7622;
+}

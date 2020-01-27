@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Header from "./Header";
 import Footer from "./Footer";
+import Success from "./Success";
 
 import './Booking.css'
 
@@ -15,7 +16,9 @@ export default class Booking extends Component {
             phone: '',
             numberOfPersons: '',
             budget: '',
-            message: ''
+            message: '',
+            submitted : false,
+            errorEmail: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -26,47 +29,74 @@ export default class Booking extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault()
-
-        const post = JSON.stringify({
-            organization: this.state.organisme,
-            personToContact: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
-            numberOfPersons: this.state.numberOfPersons,
-            budget: this.state.budget,
-            message: this.state.message
-        })
-
-        const options = {
-            method: 'POST',
-            body: post,
-            headers: { 'content-type': 'application/json' }
-        }
-        fetch('http://localhost:3050/booking/create', options)
-            .then(response => {
-                if (response.ok) {
-                } else {
-                    console.error('server response : ' + response.status);
-                }
-            }).catch(error => {
-                console.error(error);
-            });
-
-        const message = this.state
-        Object.keys(message)
-            .forEach(item => {
-                message[item] = ''
+            const post = JSON.stringify({
+                organization: this.state.organisme,
+                personToContact: this.state.name,
+                email: this.state.email,
+                phone: this.state.phone,
+                numberOfPersons: this.state.numberOfPersons,
+                budget: this.state.budget,
+                message: this.state.message
             })
-        this.setState({ ...message })
+            const options = {
+                method: 'POST',
+                body: post,
+                headers: { 'content-type': 'application/json' }
+            }
+            fetch('http://localhost:3050/booking/create', options)
+                .then(response => {
+                    if (response.ok) {
+                        const message = this.state
+                        Object.keys(message)
+                            .forEach(item => {
+                                message[item] = ''
+                            })
+                        this.setState({ ...message, submitted: true })
+                        
+                    } else {
+                        // console.error('server response : ' + response.status);
+                            this.setState({ errorEmail: true, submitted: false});
+                    }
+                }).catch(error => {
+                    console.error(error);
+                });
+    }
+    checkEmail = (email) => {
+        let mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        if (!mailRegex.test(email)) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    isSubmited = () => {
+        this.setState({submitted : false})
     }
 
     render() {
+        let success = null
+        if(this.state.submitted){
+            success = <Success
+                        isSubmited={this.isSubmited}
+                    />
+        }
+        let errorEmail = null
+        if (this.state.errorEmail){
+            errorEmail = <p style={{ color: 'darkred' }}>Veuillez saisir un email valide</p>
+        }
+
         return (
             <Fragment>
                 <Header />
-                <div className='bookingPage'>
+                <div 
+                    // style={{ backgroundColor: success ? 'grey' : 'initial' }}
+                    className='bookingPage'>
+                    {success}
                     <h2>Demande de devis en ligne</h2>
-                    <form className='bookingForm' onSubmit={this.handleSubmit}>
+                    <form
+                        className='bookingForm' 
+                        onSubmit={this.handleSubmit}>
                         <fieldset>
                             <label>Nom de l'oraganisme <span className='required'>*</span> :</label>
                             <input
@@ -94,10 +124,9 @@ export default class Booking extends Component {
                                 type='email'
                                 name='email'
                                 placeholder='E-mail *'
-                                pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-
                                 required
                                 onChange={this.handleChange} />
+                            {errorEmail }
                         </fieldset>
                         <fieldset>
                             <label>Téléphone:</label>
@@ -145,5 +174,4 @@ export default class Booking extends Component {
             </Fragment >
         )
     }
-
 }

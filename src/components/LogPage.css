@@ -17,6 +17,12 @@
 .logButton button:hover {
     background-color: #db7622;
 }
+.logpage {
+    background-image: url('/images/photo-Accueil.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40rem;
+}
 .logpage h2 {
     font-weight: bold;
     font-size: 1.5em;
@@ -52,8 +58,11 @@
   border-radius: 1rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1025px) {
 
+    /* .logPage {
+        margin: 10rem auto;
+    } */
     .logpage .logButton {
         width: 20rem;
         margin: 1rem auto; 
@@ -67,19 +76,19 @@
         width: 9.5rem;
         margin-left: 0.3rem;
     }
-    .logpage label,.bookingPage label {
+    .logpage label {
         display: block;
     }
 
-    .logpage input,.bookingPage input{
+    .logpage input{
         width : 20rem;
         border: none;
         border-bottom: rgb(63, 62, 61) 1px solid;
     }
-    .logpage input::placeholder ,.bookingPage input::placeholder {
+    .logpage input::placeholder  {
         opacity: 0;
     }
-    .logpage input[type='submit'] ,.bookingPage input[type='submit']  {
+    .logpage input[type='submit']   {
         width : 10rem;
     }
 }

@@ -33,16 +33,13 @@ export default class AdminFormPlat extends Component {
         fetch('http://localhost:3050/plat/create', options)
             .then(response => {
                 if (response.ok) {
-                    console.log(response)
                 } else {
-                    console.error('server response : ' + response.status);
                 }
             }).catch(error => {
                 console.error(error);
             });
 
         const newEntree = { ...this.state }
-        console.log(newEntree)
         Object.keys(newEntree)
             .forEach(input => {
                 newEntree[input] = ''

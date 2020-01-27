@@ -7,8 +7,6 @@ import ProduitEntree from './ProduitEntree'
 import ProduitPlat from './ProduitPlat'
 import ProduitDessert from './ProduitDessert'
 
-import Booking from './Booking'
-
 import './Carte.css'
 
 export default class Carte extends Component {
@@ -33,15 +31,12 @@ export default class Carte extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ entrees: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             })
     }
     getPlats = () => {
@@ -50,15 +45,12 @@ export default class Carte extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ plats: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             })
     }
     getDesserts = () => {
@@ -67,18 +59,14 @@ export default class Carte extends Component {
                 if (response.ok) {
                     response.json()
                         .then((response) => {
-                            console.log(response)
                             this.setState({ desserts: response })
                         })
-                } else {
-                    console.error('server response : ' + response.status);
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             })
     }
-
     render() {
         const entrees = [...this.state.entrees]
             .map(entree =>
@@ -107,28 +95,27 @@ export default class Carte extends Component {
                     <strong>Osez un voyage culinaire le temps d'une pause</strong>
                     <div className='flexCarte'>
                         <article>
-                            <h3>entrées</h3>
+                            <h3>Entrées</h3>
                             <div className='flexProduit' >
                                 {entrees}
                             </div>
                         </article>
 
                         <article>
-                            <h3>plat</h3>
+                            <h3>Plats</h3>
                             <div className='flexProduit' >
                                 {plats}
                             </div>
                         </article>
 
                         <article>
-                            <h3>déssert</h3>
+                            <h3>Désserts</h3>
                             <div className='flexProduit' >
                                 {desserts}
                             </div>
                         </article>
                     </div>
                 </section>
-                <Booking />
                 <Footer />
 
             </Fragment >

@@ -55,8 +55,7 @@ export default class SignInForm extends Component {
     render() {
 
         const goodPassword = this.checkPassword(this.state.password)
-        
-        
+    
         // const goodEmail = this.checkEmail(this.state.email)
         // let emailAlert = null
         // { !goodEmail ? emailAlert = <p className='alert'>Votre email n'est pas au bon format</p> : emailAlert = true }

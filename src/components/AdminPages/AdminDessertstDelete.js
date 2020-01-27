@@ -3,6 +3,7 @@ import './Admin.css'
 
 
 const AdminDessertstDelete = ({ details }) => {
+
     const handleDelete = () => {
         const idTodelete = JSON.stringify({
             _id: details._id,
@@ -15,18 +16,12 @@ const AdminDessertstDelete = ({ details }) => {
             }
         }
         fetch('http://localhost:3050/dessert', options)
-            .then(response => {
-                if (response.ok) {
-                    console.log(response)
-                } else {
-                    console.error('server response : ' + response.status);
-                }
-            }).catch(error => {
-                console.error(error);
-            });
     }
     return (
-        <div className='adminProducts'>
+
+        <div
+            style={{ textDecoration:  handleDelete ? " line-through" : 'none'}}
+            className='adminProducts'>
             <p style={{ color: 'black' }}>{details.title}</p>
             <button
                 onClick={handleDelete}
