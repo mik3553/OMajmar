@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import mignardises from './mignardises'
+import repas from './repas'
 import Slider from "react-slick";
 
 
 
-class Mignardise extends Component {
+class Repa extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            mignardises: []
+            repas: []
 
         }
     }
 
     componentDidMount() {
         this.setState({
-            mignardises
+            repas
         })
     }
 
@@ -44,17 +44,17 @@ class Mignardise extends Component {
         };
 
         return (
-            <div className="mignardise"    >
+            <div className="repas"    >
                 <Slider {...settings}>
                     {
 
-                        mignardises.map((mignardise) => {
+                        repas.map((repas) => {
                             return (
-                                <div className="figure-container" key={mignardise.name}>
+                                <div className="figure-container" key={repas.name}>
                                     <figure >
-                                        <img src={(`images${mignardise.picture}`)}
-                                            alt={mignardise.name} />
-                                        <figcaption className="figcaption-name">{mignardise.name}</figcaption>
+                                        <img src={(`images${repas.picture}`)}
+                                            alt={repas.name} />
+                                        <figcaption className="figcaption-name">{repas.name}</figcaption>
                                     </figure>
                                 </div>
                             )
@@ -68,6 +68,4 @@ class Mignardise extends Component {
     }
 }
 
-export default Mignardise
-
-
+export default Repa

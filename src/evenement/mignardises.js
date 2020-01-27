@@ -14,7 +14,7 @@ const mignardises = [
     {
         name: "Mini quiche sans pâte façon tajine au poulet aux olives",
         picture: "/Richbond marocain.jpg"
-    },
+    }
 
     // {
     //     name: "/Financier de potiron",

@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import mignardises from './mignardises'
+import gourmandises from './gourmandises'
+import ButtonEvenement from '../components/ButtonEvenement'
 import Slider from "react-slick";
 
 
 
-class Mignardise extends Component {
+class Gourmandise extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            mignardises: []
+            gourmandises: []
 
         }
     }
 
     componentDidMount() {
         this.setState({
-            mignardises
+            gourmandises
         })
     }
 
@@ -44,17 +45,17 @@ class Mignardise extends Component {
         };
 
         return (
-            <div className="mignardise"    >
+            <div className="gourmandise"  >
                 <Slider {...settings}>
                     {
 
-                        mignardises.map((mignardise) => {
+                        gourmandises.map((gourmandises) => {
                             return (
-                                <div className="figure-container" key={mignardise.name}>
+                                <div className="figure-container" key={gourmandises.name} style={{ display: "none" }}>
                                     <figure >
-                                        <img src={(`images${mignardise.picture}`)}
-                                            alt={mignardise.name} />
-                                        <figcaption className="figcaption-name">{mignardise.name}</figcaption>
+                                        <img src={(`images${gourmandises.picture}`)}
+                                            alt={gourmandises.name} />
+                                        <figcaption className="figcaption-name">{gourmandises.name}</figcaption>
                                     </figure>
                                 </div>
                             )
@@ -68,6 +69,4 @@ class Mignardise extends Component {
     }
 }
 
-export default Mignardise
-
-
+export default Gourmandise
