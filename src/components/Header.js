@@ -21,13 +21,15 @@ export default class Header extends Component {
               <ul>
                 <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
                 <li><Link to='/menus'>LA CARTE</Link></li>
+                <li><Link to='/evenements'>GALERIE</Link></li>
+                <li><Link to='/menus'>DEVIS EN LIGNE</Link></li>
               </ul>
             </div>
           </DrawTogglebutton >
 
 
           <div className="toolbar_logo">
-            <h1><Link to='/'>O'MAJMAR</Link></h1>
+            <Link to='/'><h1>O'MAJMAR</h1></Link>
           </div>
 
 
@@ -36,8 +38,9 @@ export default class Header extends Component {
 
             <ul>
               <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
-
               <li><Link to='/menus'>LA CARTE</Link></li>
+              <li><Link to='/evenements'>GALERIE</Link></li>
+              <li><Link to='/menus'>DEVIS EN LIGNE</Link></li>
             </ul>
 
           </div>
