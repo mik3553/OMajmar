@@ -135,25 +135,17 @@ table {
 
 /* COMPONENT HEADER */
 body {
- 
-  /* border: chocolate 1px solid; */
-  /* background: #fff2db; */
+  font-family: 'Montserrat', sans-serif;
+ }
 
-
-}
 .toolbar_nav-items {
-  /* display:none; */
 
 }
 
 .toolbar {
-  /* position: 0;
-  top: 0;
-  left: 0; */
-  width: 100%;
-  /* height: 5vh; */
 
-  /* background: grey; */
+  width: 100%;
+
 }
 
 .toolbar_logo {
@@ -174,11 +166,11 @@ body {
 }
 
 .toolbar_navigation {
+  
   display: flex;
   padding: 8% 0 0 0;
   background: #21537a;
-  
-  
+ 
 }
 
 .espace {
@@ -189,7 +181,7 @@ body {
 
 .toolbar_nav-aside {
   position: fixed;
-  /* background: rgb(194, 174, 174); */
+  
   background:#db7622 ;
   z-index: 1000;
 
@@ -243,7 +235,7 @@ body {
 
 .toolbar_nav-items a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 
 
               /* COULEUR MENU */
@@ -267,114 +259,95 @@ body {
 
 .landing-page {
   width: 100%;
-
   display: flex;
   flex-direction: column;
-  /* border: chocolate 1px solid; */
 }
+
 .bg-image {
-
-
+  width: 100vw;
+  
 }
 
 .bg-image img {
-  width: 376px;
-  height: 244px;
 
-}
-.bg-image h2 {
- 
+  width:100vw;
+  filter: contrast(100%);
 }
 
-/* Contenu à l'accueil */
-.control-horaires {
+
+/* Speech  à l'accueil: la présentation  */
+.control-content {
 padding: 7%;
 text-align: justify;
 margin: 0;
 }
 
-.control-horaires span {
+.control-content span {
   font-size: 1.5rem;
   color: #db7622;
 }
 
+/*Espace particulier et espace de pro*/
 .users-command{
-  cursor:pointer;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 5%;
-  min-height: 25vh;
-}
+  min-height: 20vh;
 
+}
 
 .btn-control {
   background:  #db7622;
   color: whitesmoke;
   border:none;
-  margin:10%;
+  width:38vw;
+  height: 20%;
+  /* border: black solid 2px; */
+}
+
+
+
+.partuculier-container, .espacePro-container{
+  border: brown solid .5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2% 0 2% ; 
 }
 
 .users-command p {
+  padding:10% 0 0 0;
 /* border: 1px solid black; */
-margin: 0 11% 0 11%;
-text-align: justify;
+  margin: 0 20% 0 20% ;
+  text-align: justify;
 }
-
-
-
-
-  /* .btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-} */
-
-
-
-
 
 
 /* COMPOSANT EVENEMENT */
+.titre-evenement{
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center; 
+  margin: 1.5% 0 0 0; 
+}
 
-
-.container-menu.btn{
+.container-menu{
 /* A REVOIR SE CONFONT AVEC LES BOUTONS DE L ACCUEIL */
-  margin-left: 1.1%;
-  padding: 2.5% 0 0 0;
-  border: black 1px solid;
+
+width: 100vw;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 3% 0 3% 0 ;
+
+}
+
+.container-menu button{
+ width: 30vw;
+ height: 5vh;
+ font-size: .75rem;
+}
  
- }
-
-
-figure{
- width:380px;
-}
-
-.figure-container {
- height: 40vh;
- text-transform: uppercase;
-}
-
-.figcaption-name{
-   margin: 0 auto ;
-   text-align: center;
-   padding: 2% 0 2% 0 ;
-}
-
-.container-img{
-}
 
 figure img{
 width: 100%; 
@@ -384,6 +357,10 @@ ul.slick-dots{
  height:5vh;
 }
 
+.figcaption-name{
+  text-align: center;
+  padding: 3% 0 3% 0 ;
+}
 
 
 
@@ -394,10 +371,7 @@ ul.slick-dots{
   }
 
   .toolbar {
-    position: fixed;
-    height: 5vh;
-    padding: 0% 0% 5% 0;
-    border-bottom: solid 0.2px;
+    /* height: 10vh; */
   }
 
   .toolbar_navigation {
@@ -405,10 +379,9 @@ ul.slick-dots{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     /* border: blue solid 4px; */
     padding: 3% 0% 1% 0;
-
-
   }
 
   .toolbar_logo {
@@ -433,7 +406,6 @@ ul.slick-dots{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* border: steelblue 4px solid ; */
     height: 0vh;
     width: 100%;
     padding: 0 0 0 0;
@@ -450,31 +422,37 @@ ul.slick-dots{
 
   /* COMPOSANT ACCUEIL */
 
+  .landing-page {
+    height: 140vh;
+   
+  }
+
+  .control-content, 
+  .users-command{
+    margin: 0 12.5% 0 12.5%;
+  } 
 
   .bg-image {
-    margin-top: 9vh;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border:2px solid black; */
-    /* background-color: cadetblue; */
+  display: flex;
+  justify-content: center;
+
   }
 
   .bg-image img {
-    padding: 2% 0 2% 0;
-    width: 75%;
-    height: 85vh;
+    width:62%;
+    
   }
 
-  .bg-image h2 {
-    font-size: 4rem;
-    text-shadow: 1px 1px 5px black;
-    letter-spacing: 0.7rem;
+  .control-content {
+    height: 15vh;
+    padding:3% 10% 5% 10%;
+    text-align: center;
+    
   }
 
-  .control-horaires {
-    margin: 1% 0 1% 0;
+  .control-content p{
+    font-size: 1.3em;
+    color: black;
   }
 
  
@@ -484,38 +462,85 @@ ul.slick-dots{
     display: none;
   }
 
-  /* COMPOSANT EVENEMENT */
+/*Espace particulier et espace de pro*/
 
+
+  .users-command{
+
+  }
+
+  .partuculier-container, .espacePro-container{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2% 0 2% ; 
+  }
   
+ 
+
+  .btn-control {
+
+    background:  #db7622;
+    color: whitesmoke;
+    width: 18vw;
+    cursor:pointer; 
+    font-size: 1.2rem;
+    padding:2% 0 7% 0;
+  }
+
+  .btn-entreprise{
+    height: 5vh;
+
+  }
+
+
+  .users-command p {
+
+  padding: 5% 5% 10% 5%;
+
+  }
+
+
+  /* COMPOSANT EVENEMENT */
+  .titre-evenement{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center; 
+    margin: 1.5% 0 0 0; 
+  }
+
   .container-menu{
-    margin: 10% 0 5% 0;
     width: 100%;
   }
 
-  .container-menu.btn{
-    margin-left: 1.1%;
-    padding: 2.5% 0 0 0;
+  .mignardise, .gourmandise, .repas{
+    margin:0% 20%  0% 30%;
+    width: 40%;;
+  } 
 
+  .mignardise img{
+  
+  }
+  .container-menu button{
+    padding: 1% 0 3% 0;
+    font-size: 1.5rem;
+    width: 20vw;
+    border-radius:2.5% ;
   }
 
-
-
- 
-
-
-  
+  .slick-track {
+  }
 
   .slick-prev:before, .slick-next:before {
-    /* font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;*/
-    color: black;
-    /*
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
-    border: 2px solid black;
+    background:  #e2ae84;
   }
+
+  ul.slick-dots {
+    position:static;
+}
+ 
 
 
 }

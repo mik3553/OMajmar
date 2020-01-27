@@ -20,7 +20,6 @@ export default class Header extends Component {
             <div className="toolbar_nav-aside">
               <ul>
                 <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
-                {/* <li><Link to='/evenements'>GALERIE</Link></li> */}
                 <li><Link to='/menus'>LA CARTE</Link></li>
               </ul>
             </div>
