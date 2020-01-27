@@ -157,9 +157,8 @@ body {
 }
 
 .toolbar_logo {
-  width: 180px;
-  height: 50px;
   text-align: center;
+  margin: 1.3rem;
 }
 
 .toolbar_logo a {
@@ -175,7 +174,7 @@ body {
 
 .toolbar_navigation {
   display: flex;
-  padding: 8% 0 0 0;
+  /* padding: 8% 0 0 0; */
   background: #21537a;
   
   
@@ -189,12 +188,13 @@ body {
 
 .toolbar_nav-aside {
   position: fixed;
+  top: 4.2187rem;
   /* background: rgb(194, 174, 174); */
   background:#db7622 ;
   z-index: 1000;
 
   /* ICI JE FIXE MA BAR DE MENU */
-  top: 80px;
+
   width: 38%;
  
   height: calc(31.3vh - 10px);

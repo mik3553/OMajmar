@@ -31,9 +31,7 @@ export default class AdminFormEntree extends Component {
         };
         // delete options.headers['Content-Type'];
         fetch('http://localhost:3050/entree/create', options)
-
         const newEntree = { ...this.state }
-        console.log(newEntree)
         Object.keys(newEntree)
             .forEach(input => {
                 newEntree[input] = ''

@@ -1,13 +1,35 @@
-import React from 'react'
+import React , {Component} from 'react'
 import './Admin.css'
 
 
-const AdminBooking= ({details}) =>{
+export default class AdminBooking extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            isDelete : null
+        }
+    }
 
-
-    return (
-       
-            <table className='adminBooking'>
+    render() {
+        const {details} = this.props
+        const handleDelete = () => {
+            const idTodelete = JSON.stringify({
+                _id: details._id
+            })
+            const options = {
+                method: 'DELETE',
+                body: idTodelete,
+                headers: { 'Content-Type': 'application/json' }
+            }
+            fetch('http://localhost:3050/booking', options)
+            this.setState({isDelete:true})
+        }
+        const {isDelete} = this.state
+        return (
+            <table 
+                style={{display : isDelete ? 'none' : null }}
+                className='adminBooking'>
                 <tbody>
                     <tr>
                         <td>
@@ -43,14 +65,23 @@ const AdminBooking= ({details}) =>{
                     </tr>
                 </tbody>
                 <tfoot>
-                    <tr style={{backgroundColor:'azure'}}>
+                    <tr style={{ backgroundColor: 'azure' }}>
                         <td colSpan='2'>
                             {details.message}
                         </td>
                     </tr>
+                    <tr>
+                        <td colSpan='2'>
+                            <button
+                                onClick={handleDelete}
+                                style={{ backgroundColor: 'red', width: '100%' }}
+                            >
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
-    )
+        )
+    }
 }
-
-export default AdminBooking

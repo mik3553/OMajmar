@@ -70,11 +70,16 @@ export default class Booking extends Component {
             return true
         }
     }
+    isSubmited = () => {
+        this.setState({submitted : false})
+    }
 
     render() {
         let success = null
         if(this.state.submitted){
-            success = <Success />
+            success = <Success
+                        isSubmited={this.isSubmited}
+                    />
         }
         let errorEmail = null
         if (this.state.errorEmail){

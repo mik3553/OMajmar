@@ -12,6 +12,7 @@ export default class Success extends Component {
     }
     handleClose = () => {
         this.setState({div : null})
+        this.props.isSubmited()
     }
 
     render() {
