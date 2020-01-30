@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import mignardises from './mignardises'
+import mignardises from '../ressources/evenements/mignardises'
 import Slider from "react-slick";
+
+import '../components/Evenement.css'
 
 
 
@@ -50,18 +52,24 @@ class Mignardise extends Component {
 
                         mignardises.map((mignardise) => {
                             return (
-                                <div className="figure-container" key={mignardise.name}>
+                                <div className="figure-container" key={mignardise._id}>
                                     <figure >
-                                        <img src={(`images${mignardise.picture}`)}
+                                        <img src={(`../../images/evenements/${mignardise.picture}`)}
                                             alt={mignardise.name} />
                                         <figcaption className="figcaption-name">{mignardise.name}</figcaption>
                                     </figure>
+                                    <div className='slider-description'>
+                                        {mignardises.description}
+                                    </div>
                                 </div>
                             )
                         }
                         )
                     }
                 </Slider>
+                <div className='slider-description-maxwidth'>
+                    {mignardises.description}
+                </div>
 
             </div>
         );

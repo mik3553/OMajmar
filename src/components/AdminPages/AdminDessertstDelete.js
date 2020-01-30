@@ -15,7 +15,7 @@ const AdminDessertstDelete = ({ details }) => {
                 'Content-Type': 'application/json'
             }
         }
-        fetch('http://localhost:3050/dessert', options)
+        fetch('https://omajmar-server.herokuapp.com/dessert', options)
     }
     return (
 

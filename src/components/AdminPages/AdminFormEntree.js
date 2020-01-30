@@ -30,7 +30,10 @@ export default class AdminFormEntree extends Component {
             body: formData
         };
         // delete options.headers['Content-Type'];
-        fetch('http://localhost:3050/entree/create', options)
+        fetch('https://omajmar-server.herokuapp.com/entree/create', options)
+            .then(response => {
+                console.log(response)
+            })
         const newEntree = { ...this.state }
         Object.keys(newEntree)
             .forEach(input => {

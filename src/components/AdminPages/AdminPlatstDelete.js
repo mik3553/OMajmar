@@ -14,7 +14,7 @@ const AdminPlatstDelete = ({ details }) => {
                 'Content-Type': 'application/json'
             }
         }
-        fetch('http://localhost:3050/plat', options)
+        fetch('https://omajmar-server.herokuapp.com/plat', options)
 
     }
     return (

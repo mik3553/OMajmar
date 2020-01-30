@@ -13,7 +13,7 @@ const AdminEntreestDelete = ({details}) => {
                     'Content-Type': 'application/json'
                 }
             }
-            fetch('http://localhost:3050/entree', options)
+            fetch('https://omajmar-server.herokuapp.com/entree', options)
         }
     return (
         <div className='adminProducts'>
