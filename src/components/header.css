@@ -1,0 +1,273 @@
+
+.toolbar_nav-items {
+  
+}
+
+.toolbar {
+  
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  
+}
+
+.toolbar_logo {
+  text-align: center;
+  margin: 1.3rem;
+}
+
+.toolbar_logo a {
+  
+  color:whitesmoke;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .2rem;
+  font-weight: medium;
+  
+  text-decoration: none;
+}
+
+.toolbar_navigation {
+  
+  display: flex;
+
+  background: #21537a;
+  
+}
+
+
+/* SIDEBAR  Mobile  */
+
+.toolbar_nav-aside {
+  position: fixed;
+  top: 4.2187rem;
+  /* background: rgb(194, 174, 174); */
+  
+  background:#db7622 ;
+  z-index: 100;
+  opacity: 0.8;
+  /* ICI JE FIXE MA BAR DE MENU */
+  transition: all 0 0.7s ease-in-out;
+  font-size: 1rem;
+}
+
+.toolbar_nav-aside ul {
+  margin: 0.5rem 1rem 0 0.5rem;
+}
+
+
+
+.toolbar_nav-aside ul li a{
+  /* opacity: 0.5; */
+  font-family: arial;
+  
+  color: whitesmoke;
+  font-weight: 900;
+  
+  cursor: pointer;
+  line-height: 2.5;
+  text-align: left;
+  
+  text-decoration: none;
+}
+
+
+/*TOOLBAR NAV*/
+
+/* toolbar_nav-items ul cachée sera présente que sur Le desktop à 1025px */
+.toolbar_nav-items ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 15vh;
+  width: 100%;
+  padding: 5% 0 0 0;
+  display: none;
+}
+
+.toolbar_nav-items a {
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  
+  /* COULEUR MENU */
+  /* color: black; */
+  color:whitesmoke;
+  
+  text-align: center;
+}
+
+.toolbar_nav-items li {
+  border-spacing: 0.5%; /*espace entre élement*/
+  text-align: center;
+}
+
+.toolbar_nav-items a:hover,
+.toolbar_nav-items a:active {
+  color: orange;
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+
+     /* COMPONENT HEADER */
+  
+  h1{
+    font-size: 1.6em;
+  }
+  .toolbar {
+    border-bottom: solid 0.2px;
+  }
+  
+
+/* SIDEBAR  Mobile  */
+
+.toolbar_nav-aside {
+  position: fixed;
+  top: 4.2187rem;
+ 
+  
+  background:#db7622 ;
+  z-index: 10000000;
+  opacity: 0.8; 
+  /* ICI JE FIXE MA BAR DE MENU */
+  transition: all 0 0.7s ease-in-out;
+  font-size: 1rem;
+}
+
+.toolbar_nav-aside ul {
+  margin: 0.5rem 1rem 0 0.5rem;
+}
+
+
+
+.toolbar_nav-aside ul li a{
+
+  font-family: arial;
+  
+  color: whitesmoke;
+  font-weight: 900;
+  
+  cursor: pointer;
+  line-height: 2.5;
+  text-align: left;
+  
+  text-decoration: none;
+}
+ 
+
+  .toolbar_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar_logo {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .toolbar_nav-items {
+    width: 20vw;
+    height: 5vh;
+    /* border: yellow 4px solid; */
+  }
+
+  .toolbar_nav-items {
+    width: 100%;
+    height: 0vh;
+    /* border: yellow 4px solid; */
+  }
+
+  .toolbar_nav-items ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 0vh;
+    width: 100%;
+    padding: 0 0 0 0;
+    visibility: hidden;
+
+
+    border:red solid 2px;
+  }
+
+  .toolbar_nav-items li {
+    
+    color:whitesmoke;
+  }
+  .toolbar_nav-items li:hover{
+    color: orange;
+  }
+}
+
+
+
+@media screen and (min-width: 1025px){
+    /* COMPONENT HEADER */
+  
+h1{
+    font-size: 1.6em;
+  }
+  .toolbar {
+    border-bottom: solid 0.2px;
+  }
+  
+  .toolbar_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar_logo {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .toolbar_nav-items {
+    width: 20vw;
+    height: 5vh;
+    /* border: yellow 4px solid; */
+  }
+  
+  .toolbar_nav-items {
+    width: 100%;
+    height: 0vh;
+    /* border: yellow 4px solid; */
+  }
+  
+
+  .toolbar_nav-items a{
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+  }
+  .toolbar_nav-items ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 0vh;
+    width: 100%;
+    padding: 0 0 0 0;
+    visibility: visible;
+  }
+  
+  .toolbar_nav-items li {
+    
+    color:whitesmoke;
+  }
+  .toolbar_nav-items li:hover{
+    color: orange;
+  }
+
+  .toolbar_nav-aside {
+   display:none;
+  }
+
+}

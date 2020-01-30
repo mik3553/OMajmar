@@ -3,11 +3,13 @@ import React, { Component, Fragment } from 'react'
 
 import Header from './Header'
 import Footer from './Footer'
-
+import Partenaires from './Partenaires'
 import { Link } from 'react-router-dom'
 
 
-import "../App.css";
+import './accueil.css'
+
+
 
 
 export default class PageAccueil extends Component {
@@ -25,38 +27,56 @@ export default class PageAccueil extends Component {
                         />
                     </div>
                     <div className="control-content">
-                        <p> <span>" </span> Texte de présentation: qui sommes nous ? que faisons nous ?
-                            quel est notre manifeste ?  This HTML file is a template. If you open it directly in the browser, you will see an empty page.
-                            You can add webfonts, meta tags, e <Link to={"/evenements"}> <span style={{ cursor: "pointer", fontSize: "1rem" }} >  + d'infos </span></Link> <span> "</span>
-                        </p>
+                             <p>
+                                 
+                                  <span>" </span>O’Majmar vous invite à goûter à l’authenticité d’une cuisine familiale et traditionnelle en mettant en avant nos valeurs de partage, de convivialité pour déguster un plat typique du Maroc. <span> "</span>
+
+                            </p>
+
+                            <p>
+                            Dans une démarche éco responsable nous travaillons exclusivement avec des produits frais et privilégions les récoltes de saison. Nous utilisons des packagings recyclables et/ou compostables ou durables. 
+                            </p>
+
+                            <p>
+                            Afin d’éviter le gaspillage alimentaire et pour vous garantir une cuisine maison de qualité, nous vous demandons de bien vouloir passer commande 48h à l’avance avec un minimum de 5 personnes par commande. Au-delà de 30 personnes le délai s’étendra à 72h. <Link to={"/presentation"}> <span style={{ cursor: "pointer", fontSize: "1rem" }} >  En savoir plus  </span></Link> 
+                            </p>
+                       
 
                     </div>
 
                     <div className="users-command container">
-                        <div className="partuculier-container">
+                        <div className="particulier-container">
                             <button className="btn-particulier btn-control btn" type="submit">
                                 <Link to="/menus" style={{ textDecoration: "none", color: "whitesmoke" }}> PARTICULIER ?</Link>
                             </button>
-                            <p> ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quis odio consectetur ratione id eius iusto libero,
-                                    ?
+                            <p>Passez un bon moment en dégustant des petits plats maison en famille, entre amis ou collègues. </p>
+                            
+                            <br/>
+                            <p>Pour assurer une qualité de travail, veillez prévoir 48h d’avance pour passer commande.   </p>
 
-                              </p>
                         </div>
 
-                        <br />
+               
+
                         <div className="espacePro-container">
                             <button className="btn-entreprise btn-control btn" type="submit">
                                 <Link to={"/evenements"} style={{ textDecoration: "none", color: "whitesmoke" }}> ÉVÈNEMENTS ?</Link>
                             </button>
-                            <p> ipsum dolor sit amet consectetur adipisicing elit.
-                                     Quis odio consectetur ratione id eius iusto libero,
-                                    ?
-                                </p>
+                            <p>  Profitez d'un moment de convivialité avec vos collaborateurs grâce à un voyage culinaire pour vos buffets, déjeuners d’affaires...
+                                <Link to={"/devis"}><span className="lien-devis"><br/> Demandez un devis !</span></Link>
+                            </p>
+                            <br/>
+                            
+                            <p>
+                            Pour assurer une qualité de travail, veillez prévoir 72h d’avance pour passer commande. 
+                            </p>
+                        
                         </div>
 
                     </div>
                 </div>
+
+                <Partenaires/>
 
                 <Footer />
 

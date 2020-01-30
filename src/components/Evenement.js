@@ -5,9 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Header from './Header'
 import Footer from './Footer'
+
 import ButtonEvenement from './ButtonEvenement';
 
 
+import './evenement.css'
 
 export default class Evenement extends Component {
 

@@ -38,14 +38,19 @@ body{
     /* border: black 4px solid; */
 }
 
-@media screen and (max-width: 375px) {
-  .toggle-button {
-    /* display:none; */
-  }
-}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) and (max-width: 1024px){}
+
+
+
+@media screen and (min-width: 1025px) {  
+  
   .toggle-button {
     display: none;
   }
-}
+
+} 
+
+
+
+
