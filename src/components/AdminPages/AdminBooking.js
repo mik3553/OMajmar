@@ -22,7 +22,7 @@ export default class AdminBooking extends Component {
                 body: idTodelete,
                 headers: { 'Content-Type': 'application/json' }
             }
-            fetch('http://localhost:3050/booking', options)
+            fetch('https://omajmar-server.herokuapp.com/booking', options)
             this.setState({isDelete:true})
         }
         const {isDelete} = this.state

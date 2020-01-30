@@ -4,16 +4,12 @@ import { Link } from 'react-router-dom'
 
 import "../App.css";
 
-
-
 export default class Header extends Component {
 
   render() {
     return (
-
       <header className="toolbar">
         <nav className="toolbar_navigation">
-          <div className="espace" />
 
           <DrawTogglebutton>
             {/* SIDEBAR  */}
@@ -21,8 +17,8 @@ export default class Header extends Component {
               <ul>
                 <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
                 <li><Link to='/menus'>LA CARTE</Link></li>
-                <li><Link to='/evenements'>GALERIE</Link></li>
-                <li><Link to='/menus'>DEVIS EN LIGNE</Link></li>
+                <li><Link to='/galerie'>GALERIE</Link></li>
+                <li><Link to='/reservation'>DEVIS EN LIGNE</Link></li>
               </ul>
             </div>
           </DrawTogglebutton >
@@ -39,8 +35,8 @@ export default class Header extends Component {
             <ul>
               <li><Link to='/evenements'>ÉVÈNEMENTS</Link></li>
               <li><Link to='/menus'>LA CARTE</Link></li>
-              <li><Link to='/evenements'>GALERIE</Link></li>
-              <li><Link to='/menus'>DEVIS EN LIGNE</Link></li>
+              <li><Link to='/galerie'>GALERIE</Link></li>
+              <li><Link to='/reservation'>DEVIS EN LIGNE</Link></li>
             </ul>
 
           </div>

@@ -5,7 +5,6 @@ import Success from "./Success";
 
 import './Booking.css'
 
-
 export default class Booking extends Component {
     constructor(props) {
         super(props)
@@ -43,7 +42,7 @@ export default class Booking extends Component {
                 body: post,
                 headers: { 'content-type': 'application/json' }
             }
-            fetch('http://localhost:3050/booking/create', options)
+            fetch('https://omajmar-server.herokuapp.com/booking/create', options)
                 .then(response => {
                     if (response.ok) {
                         const message = this.state
@@ -83,93 +82,94 @@ export default class Booking extends Component {
         }
         let errorEmail = null
         if (this.state.errorEmail){
-            errorEmail = <p style={{ color: 'darkred' }}>Veuillez saisir un email valide</p>
+            errorEmail = <p style={{ color: 'red' }}>Veuillez saisir un email valide</p>
         }
 
         return (
             <Fragment>
                 <Header />
-                <div 
-                    // style={{ backgroundColor: success ? 'grey' : 'initial' }}
-                    className='bookingPage'>
-                    {success}
-                    <h2>Demande de devis en ligne</h2>
-                    <form
-                        className='bookingForm' 
-                        onSubmit={this.handleSubmit}>
-                        <fieldset>
-                            <label>Nom de l'oraganisme <span className='required'>*</span> :</label>
-                            <input
-                                value={this.state.organisme}
+                <section className='bookingPage'>
+                    <article className='bookingForm' >
+                        {success}
+                        <h2>Demande de devis en ligne</h2>
+                        <form
+                        
+                            onSubmit={this.handleSubmit}>
+                            <fieldset>
+                                <label>Nom de l'oraganisme <span className='required'>*</span> :</label>
+                                <input
+                                    value={this.state.organisme}
+                                    type='text'
+                                    name='organisme'
+                                    placeholder="Nom de l'oraganisme *"
+                                    required
+                                    onChange={this.handleChange} />
+                            </fieldset>
+                            <fieldset>
+                                <label>Personne à contacter <span className='required'>*</span> :</label>
+                                <input
+                                    value={this.state.name}
+                                    type='text'
+                                    name='name'
+                                    placeholder='Personne à contacter *'
+                                    required
+                                    onChange={this.handleChange} />
+                            </fieldset>
+                            <fieldset>
+                                <label>E-mail <span className='required'>*</span> :</label>
+                                <input
+                                    style={ {border : errorEmail ? '4px solid red' : 'null'} }
+                                    value={this.state.email}
+                                    type='email'
+                                    name='email'
+                                    placeholder='E-mail *'
+                                    required
+                                    onChange={this.handleChange} />
+                                {errorEmail }
+                            </fieldset>
+                            <fieldset>
+                                <label>Téléphone:</label>
+                                <input
+                                    value={this.state.phone}
+                                    type='text'
+                                    name='phone'
+                                    pattern="^\+?\s*(\d+\s?){8,}$"
+                                    placeholder='Téléphone'
+                                    onChange={this.handleChange} />
+                            </fieldset>
+                            <fieldset>
+                                <label>Nombre de personnes <span className='required'>*</span> :</label>
+                                <input
+                                    value={this.state.numberOfPersons}
+                                    type='number'
+                                    name='numberOfPersons'
+                                    placeholder="Nombre de personnes *"
+                                    required
+                                    onChange={this.handleChange} />
+                            </fieldset>
+                            <fieldset>
+                                <label>Budget par personne <span className='required'>*</span> :</label>
+                                <input
+                                    value={this.state.budget}
+                                    type='text'
+                                    name='budget'
+                                    placeholder="Budget par personne *"
+                                    pattern="^[0-9]*"
+                                    required
+                                    onChange={this.handleChange} />
+                            </fieldset>
+                            <textarea
+                                rows='10'
+                                value={this.state.message}
                                 type='text'
-                                name='organisme'
-                                placeholder="Nom de l'oraganisme *"
-                                required
-                                onChange={this.handleChange} />
-                        </fieldset>
-                        <fieldset>
-                            <label>Personne à contacter <span className='required'>*</span> :</label>
-                            <input
-                                value={this.state.name}
-                                type='text'
-                                name='name'
-                                placeholder='Personne à contacter *'
-                                required
-                                onChange={this.handleChange} />
-                        </fieldset>
-                        <fieldset>
-                            <label>E-mail <span className='required'>*</span> :</label>
-                            <input
-                                value={this.state.email}
-                                type='email'
-                                name='email'
-                                placeholder='E-mail *'
-                                required
-                                onChange={this.handleChange} />
-                            {errorEmail }
-                        </fieldset>
-                        <fieldset>
-                            <label>Téléphone:</label>
-                            <input
-                                value={this.state.phone}
-                                type='text'
-                                name='phone'
-                                pattern="^\+?\s*(\d+\s?){8,}$"
-                                placeholder='Téléphone'
-                                onChange={this.handleChange} />
-                        </fieldset>
-                        <fieldset>
-                            <label>Nombre de personnes <span className='required'>*</span> :</label>
-                            <input
-                                value={this.state.numberOfPersons}
-                                type='number'
-                                name='numberOfPersons'
-                                placeholder="Nombre de personnes *"
-                                required
-                                onChange={this.handleChange} />
-                        </fieldset>
-                        <fieldset>
-                            <label>Budget par personne <span className='required'>*</span> :</label>
-                            <input
-                                value={this.state.budget}
-                                type='text'
-                                name='budget'
-                                placeholder="Budget par personne *"
-                                pattern="^[0-9]*"
-                                required
-                                onChange={this.handleChange} />
-                        </fieldset>
-                        <textarea
-                            rows='10'
-                            value={this.state.message}
-                            type='text'
-                            name='message'
-                            placeholder="Votre méssage"
-                            onChange={this.handleChange}>
-                        </textarea>
-                        <input type='submit' />
-                    </form>
-                </div>
+                                name='message'
+                                placeholder="Votre méssage"
+                                onChange={this.handleChange}>
+                            </textarea>
+                            <input type='submit' />
+                        </form>
+                    </article>
+                </section>
                 <Footer />
             </Fragment >
         )

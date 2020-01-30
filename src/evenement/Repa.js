@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import repas from './repas'
+import repas from '../ressources/evenements/repas'
 import Slider from "react-slick";
+
+import '../components/Evenement.css'
 
 
 
@@ -50,12 +52,15 @@ class Repa extends Component {
 
                         repas.map((repas) => {
                             return (
-                                <div className="figure-container" key={repas.name}>
+                                <div className="figure-container" key={repas._id}>
                                     <figure >
-                                        <img src={(`images${repas.picture}`)}
+                                        <img src={(`../../images/evenements/${repas.picture}`)}
                                             alt={repas.name} />
                                         <figcaption className="figcaption-name">{repas.name}</figcaption>
                                     </figure>
+                                    <div className='slider-description'>
+                                        {repas.description}
+                                    </div>
                                 </div>
                             )
                         }

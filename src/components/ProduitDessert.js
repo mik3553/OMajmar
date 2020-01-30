@@ -9,7 +9,7 @@ export default class ProduitDessert extends Component {
         return (
 
             <figure className='figure' id={details._id}>
-                <img src={`http://localhost:3050/${details.image}`} alt={details.title} />
+                <img src={`https://omajmar-server.herokuapp.com/${details.image}`} alt={details.title} />
                 <figcaption>{details.title}</figcaption>
                 <p>{details.ingredients}</p>
                 <span>{details.price} €</span>

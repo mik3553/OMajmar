@@ -29,7 +29,7 @@ export default class LogInForm extends Component {
             }
         }
 
-        fetch('http://localhost:3050/user', options)
+        fetch('https://omajmar-server.herokuapp.com/user', options)
             .then(async response => {
                 if (response.ok) {
                     const data = await response.json()

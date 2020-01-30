@@ -1,6 +1,17 @@
-.bookingPage {
-    margin: 1rem auto;
+  .bookingPage{
+        background-image: url('/images/rsz_booking01.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+
+
+.bookingForm {
+    margin: 0 auto;
+    padding: 2rem 0 ;
 }
+
+
 .bookingPage h2{
     font-weight: bold;
     font-size: 1.5em;
@@ -16,22 +27,24 @@
     margin: 0.5rem auto;
     border: none;
     border-bottom: #21537a 1px solid;
+    opacity: 0.6;
+    padding: 0.5rem 0;
 }
 .bookingPage input[type='submit'] {
     display: block;
     width : 7rem;
     margin: 0.5rem auto;
     border: 2px solid #db7622;
-    background-color: #d68545;
+    background-color: #db7622;
     border-radius: 0.5rem;
 }
 .bookingPage input[type='submit']:hover {
-    background-color: #db7622;
+    background-color: green;
 }
 .bookingPage form  {
   padding: 1rem auto;
   margin: 0 auto;
-  width: 20rem;
+  width: 15rem;
   border:#21537a 1px solid;
   padding: 1rem;
   border-radius: 1rem;
@@ -39,32 +52,36 @@
 .bookingPage textarea {
     margin-top: 1rem;
     width: 100%;
+    opacity: 0.6;
+    padding: 0.5rem 0;
 }
 
 
 @media screen and (min-width: 1025px){
-    /* .bookingPage {
-        background-image: url('/images/reservation.JPG');
-        background-size: cover;
-    } */
-    .bookingPage{
-        padding-top: 5rem ;
-        padding-bottom: 5rem ;
+    .bookingPage form {
+        width: 25rem;
     }
     .bookingPage label {
         display: block;
-        
+        color: white;
     }
-    /* .bookingPage input{
-        opacity: 0.2;
+    .bookingForm {
+        padding-top:8rem;
+        padding-bottom:8rem;
+        margin: 0 auto;
+    }
+    .bookingPage input{
+        opacity: 0.6;
+        padding: 0.5rem 0;
     }
     .bookingPage textarea{
-        opacity: 0.2;
-    } */
+        opacity: 0.6;
+    }
     .bookingPage input::placeholder {
         opacity: 0;
     }
     .bookingPage input[type='submit']  {
         width : 10rem;
     }
+
 }
