@@ -33,6 +33,7 @@ export default class AdminFormPlat extends Component {
         fetch('https://omajmar-server.herokuapp.com/plat/create', options)
             .then(response => {
                 if (response.ok) {
+                    console.log(response)
                 } else {
                 }
             }).catch(error => {

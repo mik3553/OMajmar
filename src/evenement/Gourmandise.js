@@ -27,8 +27,9 @@ class Gourmandise extends Component {
 
         const settings = {
             dots: true,
+            autoplay: true,
             infinite: true,
-            speed: 500,
+            speed: 800,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
