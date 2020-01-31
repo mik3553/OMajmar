@@ -1,0 +1,92 @@
+/* COMPOSANT EVENEMENT */
+.titre-evenement{
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center; 
+  margin: 1.5% 0 0 0; 
+}
+
+.container-menu{
+  /* A REVOIR SE CONFONT AVEC LES BOUTONS DE L ACCUEIL */
+  
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3% 0 3% 0 ;
+  
+}
+
+.container-menu button{
+  width: 30vw;
+  height: 5vh;
+  font-size: .75rem;
+}
+
+
+figure img{
+  width: 100%; 
+} 
+
+ul.slick-dots{
+  height:5vh;
+}
+
+.figcaption-name{
+  text-align: center;
+  padding: 3% 0 3% 0 ;
+}
+  
+  
+  
+  /* //lorsque la largeur dépasse les 6OOpx    */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  
+   
+  
+    
+  
+    /* COMPOSANT EVENEMENT */
+    .titre-evenement{
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-align: center; 
+      margin: 1.5% 0 0 0; 
+    }
+  
+    .container-menu{
+      width: 100%;
+    }
+  
+    .mignardise, .gourmandise, .repas{
+      margin:0% 20%  0% 30%;
+      width: 40%;;
+    } 
+  
+    .mignardise img{
+    
+    }
+    .container-menu button{
+      padding: 1% 0 3% 0;
+      font-size: 1.5rem;
+      width: 20vw;
+      border-radius:2.5% ;
+    }
+  
+    .slick-track {
+    }
+  
+    .slick-prev:before, .slick-next:before {
+      background:  #e2ae84;
+    }
+  
+    ul.slick-dots {
+      position:static;
+  }
+   
+  
+  
+  }
+
+
+@media screen and (min-width: 1025px) {}

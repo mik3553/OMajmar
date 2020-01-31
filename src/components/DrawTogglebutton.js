@@ -27,9 +27,9 @@ export default class DrawTogglebutton extends Component {
         <button
           className="toggle-button" onClick={this.toggleClick}
         >
-          <div className="toggle-button__line"></div>
-          <div className="toggle-button__line"></div>
-          <div className="toggle-button__line"></div>
+          <div className="toggle-button__line "></div>
+          <div className="toggle-button__line "></div>
+          <div className="toggle-button__line "></div>
         </button>
       </div>
 
