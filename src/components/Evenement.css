@@ -1,0 +1,93 @@
+.evenements {
+    margin: 6rem 1rem 3rem 1rem;
+}
+.evenements h2 {
+    color:#db7622;
+    font-weight: 900;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.evenements h3 {
+    color:#db7622;
+    font-weight: 900;
+    margin: 1rem 0 0 0 ;
+    font-size: 1.2em;
+    text-align: center;
+    /* margin-bottom: 1rem; */
+}
+
+.evenements .slider {
+    margin:0 0 2rem 0;
+    border: 1px #db7622 solid;
+    box-shadow: -2px -2px 5px 6px #21537a;
+}
+
+.figure-container {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+.figure-container img {
+    width: 100%;
+}
+.figcaption-name {
+    margin: 1rem auto;
+}
+.slider-description {
+    margin: 0.5rem auto;
+}
+.slick-prev:before {
+    color: #db7622;
+
+    display: none;
+}
+.slick-next:before {
+    color: #db7622;
+
+    display: none;
+}
+
+ul.slick-dots {
+    margin: 0 auto 2rem auto;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px){
+
+    /* .mignardise, .repas, .gourmandise {
+        width: 50rem;
+        margin: 0 auto;
+    }
+    .evenements .slider {
+        margin:0 2rem 0 0;
+
+    } */
+    
+}
+
+@media screen and (min-width: 1025px) {
+
+        .evenements {
+             margin: 6rem 15rem 3rem 15rem;
+        }
+        .mignardise, .repas, .gourmandise {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .evenements .slider {
+            margin:0 auto 2rem auto;
+        }
+        .slick-prev:before {
+            /* color: #21537a;
+            font-size: 2.5rem;
+            margin-left: 1rem; */
+            display: none;
+            /* z-index: 100000; */
+        }
+        .slick-next:before {
+            /* color: #21537a;
+            font-size: 2.5rem;
+            margin-left: -5rem; */
+            display: none;
+        }
+
+}

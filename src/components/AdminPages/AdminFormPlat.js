@@ -30,9 +30,10 @@ export default class AdminFormPlat extends Component {
             body: formData
         };
         // delete options.headers['Content-Type'];
-        fetch('http://localhost:3050/plat/create', options)
+        fetch('https://omajmar-server.herokuapp.com/plat/create', options)
             .then(response => {
                 if (response.ok) {
+                    console.log(response)
                 } else {
                 }
             }).catch(error => {

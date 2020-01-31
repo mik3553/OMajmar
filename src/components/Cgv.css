@@ -1,7 +1,7 @@
 /*===========CGV component=============*/
 .cgv {
   width: 75%;
-  margin: 0 auto;
+  margin:7rem auto 2rem auto;
 }
 .cgv h2 {
   text-align: center;

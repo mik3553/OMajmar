@@ -1,92 +1,93 @@
-/* COMPOSANT EVENEMENT */
-.titre-evenement{
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-align: center; 
-  margin: 1.5% 0 0 0; 
+.evenements {
+    margin: 6rem 1rem 3rem 1rem;
+}
+.evenements h2 {
+    color:#db7622;
+    font-weight: 900;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.evenements h3 {
+    color:#db7622;
+    font-weight: 900;
+    margin: 1rem 0 0 0 ;
+    font-size: 1.2em;
+    text-align: center;
+    /* margin-bottom: 1rem; */
 }
 
-.container-menu{
-  /* A REVOIR SE CONFONT AVEC LES BOUTONS DE L ACCUEIL */
-  
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 3% 0 3% 0 ;
-  
+.evenements .slider {
+    margin:0 0 2rem 0;
+    border: 1px #db7622 solid;
+    box-shadow: -2px -2px 5px 6px #21537a;
 }
 
-.container-menu button{
-  width: 30vw;
-  height: 5vh;
-  font-size: .75rem;
+.figure-container {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+.figure-container img {
+    width: 100%;
+}
+.figcaption-name {
+    margin: 1rem auto;
+}
+.slider-description {
+    margin: 0.5rem auto;
+}
+.slick-prev:before {
+    color: #db7622;
+
+    display: none;
+}
+.slick-next:before {
+    color: #db7622;
+
+    display: none;
 }
 
-
-figure img{
-  width: 100%; 
-} 
-
-ul.slick-dots{
-  height:5vh;
+ul.slick-dots {
+    margin: 0 auto 2rem auto;
 }
 
-.figcaption-name{
-  text-align: center;
-  padding: 3% 0 3% 0 ;
-}
-  
-  
-  
-  /* //lorsque la largeur dépasse les 6OOpx    */
-@media screen and (min-width: 500px) and (max-width: 1024px) {
-  
-   
-  
+@media screen and (min-width: 800px) and (max-width: 1024px){
+
+    /* .mignardise, .repas, .gourmandise {
+        width: 50rem;
+        margin: 0 auto;
+    }
+    .evenements .slider {
+        margin:0 2rem 0 0;
+
+    } */
     
-  
-    /* COMPOSANT EVENEMENT */
-    .titre-evenement{
-      font-size: 2rem;
-      text-transform: uppercase;
-      text-align: center; 
-      margin: 1.5% 0 0 0; 
-    }
-  
-    .container-menu{
-      width: 100%;
-    }
-  
-    .mignardise, .gourmandise, .repas{
-      margin:0% 20%  0% 30%;
-      width: 40%;;
-    } 
-  
-    .mignardise img{
-    
-    }
-    .container-menu button{
-      padding: 1% 0 3% 0;
-      font-size: 1.5rem;
-      width: 20vw;
-      border-radius:2.5% ;
-    }
-  
-    .slick-track {
-    }
-  
-    .slick-prev:before, .slick-next:before {
-      background:  #e2ae84;
-    }
-  
-    ul.slick-dots {
-      position:static;
-  }
-   
-  
-  
-  }
+}
 
+@media screen and (min-width: 1025px) {
 
-@media screen and (min-width: 1025px) {}
+        .evenements {
+             margin: 6rem 15rem 3rem 15rem;
+        }
+        .mignardise, .repas, .gourmandise {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .evenements .slider {
+            margin:0 auto 2rem auto;
+        }
+        .slick-prev:before {
+            /* color: #21537a;
+            font-size: 2.5rem;
+            margin-left: 1rem; */
+            display: none;
+            /* z-index: 100000; */
+        }
+        .slick-next:before {
+            /* color: #21537a;
+            font-size: 2.5rem;
+            margin-left: -5rem; */
+            display: none;
+        }
+
+}

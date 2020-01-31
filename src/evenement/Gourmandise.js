@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import gourmandises from './gourmandises'
+import gourmandises from '../ressources/evenements/gourmandises'
 import Slider from "react-slick";
 
-
+import '../components/Evenement.css'
 
 class Gourmandise extends Component {
     constructor(props) {
@@ -27,8 +27,9 @@ class Gourmandise extends Component {
 
         const settings = {
             dots: true,
+            autoplay: true,
             infinite: true,
-            speed: 500,
+            speed: 800,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
@@ -50,12 +51,15 @@ class Gourmandise extends Component {
 
                         gourmandises.map((gourmandises) => {
                             return (
-                                <div className="figure-container" key={gourmandises.name} style={{ display: "none" }}>
+                                <div className="figure-container" key={gourmandises._id} style={{ display: "none" }}>
                                     <figure >
-                                        <img src={(`images${gourmandises.picture}`)}
+                                        <img src={(`../../images/evenements/${gourmandises.picture}`)}
                                             alt={gourmandises.name} />
                                         <figcaption className="figcaption-name">{gourmandises.name}</figcaption>
                                     </figure>
+                                    <div className='slider-description'>
+                                        {gourmandises.description}
+                                    </div>
                                 </div>
                             )
                         }

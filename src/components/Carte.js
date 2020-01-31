@@ -1,4 +1,3 @@
-
 import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Footer from './Footer'
@@ -26,7 +25,7 @@ export default class Carte extends Component {
         // }, 5000);
     }
     getEntrees = () => {
-        fetch('http://localhost:3050/entrees')
+        fetch('https://omajmar-server.herokuapp.com/entrees')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -40,7 +39,7 @@ export default class Carte extends Component {
             })
     }
     getPlats = () => {
-        fetch('http://localhost:3050/plats')
+        fetch('https://omajmar-server.herokuapp.com/plats')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -54,7 +53,7 @@ export default class Carte extends Component {
             })
     }
     getDesserts = () => {
-        fetch('http://localhost:3050/desserts')
+        fetch('https://omajmar-server.herokuapp.com/desserts')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -117,7 +116,6 @@ export default class Carte extends Component {
                     </div>
                 </section>
                 <Footer />
-
             </Fragment >
         )
     }

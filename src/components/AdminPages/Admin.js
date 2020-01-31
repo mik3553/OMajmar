@@ -36,7 +36,7 @@ export default class Admin extends Component {
             this.getDesserts()
     }
     getEntrees = () => {
-        fetch('http://localhost:3050/entrees')
+        fetch('https://omajmar-server.herokuapp.com/entrees')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -50,7 +50,7 @@ export default class Admin extends Component {
             })
     }
     getPlats = () => {
-        fetch('http://localhost:3050/plats')
+        fetch('https://omajmar-server.herokuapp.com/plats')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -64,7 +64,7 @@ export default class Admin extends Component {
             })
     }
     getDesserts = () => {
-        fetch('http://localhost:3050/desserts')
+        fetch('https://omajmar-server.herokuapp.com/desserts')
             .then(response => {
                 if (response.ok) {
                     response.json()
@@ -78,7 +78,7 @@ export default class Admin extends Component {
             })
     }
     getBookings(){
-        fetch('http://localhost:3050/bookings')
+        fetch('https://omajmar-server.herokuapp.com/bookings')
         .then(response => {
             response.json()
             .then(response =>{
@@ -98,7 +98,7 @@ export default class Admin extends Component {
     }
     
     render() {
-        if (!this.state.isAdmin){
+        if (this.state.isAdmin){
             return  <section className='adminLogIn'>
                         <LoginForm 
                             isAuthenticated={()=>this.getAuthenticated()}/>

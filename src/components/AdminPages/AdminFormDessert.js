@@ -31,21 +31,21 @@ export default class AdminFormDessert extends Component {
             body: formData
         };
         // delete options.headers['Content-Type'];
-        fetch('http://localhost:3050/dessert/create', options)
+        fetch('https://omajmar-server.herokuapp.com/dessert/create', options)
             .then(response => {
                 if (response.ok) {
+                    const newEntree = { ...this.state }
+                    Object.keys(newEntree)
+                        .forEach(input => {
+                            newEntree[input] = ''
+                        })
+                    this.setState({ ...newEntree })
                 } else {
                 }
             }).catch(error => {
                 console.error(error);
             });
 
-        const newEntree = { ...this.state }
-        Object.keys(newEntree)
-            .forEach(input => {
-                newEntree[input] = ''
-            })
-        this.setState({ ...newEntree })
     }
 
 

@@ -1,6 +1,5 @@
 .carte {
-  margin: 2rem 1rem;
-  
+  margin: 5rem 1rem 2rem 1rem;
 }
 .carte h2 {
     margin: 0.5rem;
@@ -70,19 +69,19 @@
 
 @media screen and (min-width: 500px) and (max-width: 1024px){
     .carte {
-      margin: 2rem 6rem;
+      margin: 5rem 8rem 2rem 8rem;
     }
      .carte figure {
         width: 16rem;
-        
+        margin: 1rem 0;
     }
      .carte img {
-        
         width: 16rem;
     }
-        .flexProduit {
+    .flexProduit {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 @media screen and (min-width: 1025px) {
@@ -92,24 +91,29 @@
     .flexProduit {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: space-; */
+        justify-content: space-around;
     }
     .carte {
-      margin: 2rem 8rem;
+      margin:6rem 10rem 2rem 10rem;
     }
     .carte figure {
-        width: 23rem;
+        width: 18rem;
+        margin: 1rem ;
     }
     .carte h3 {
         width: 100%;
     }
+
     .carte img {
-        height: 17rem;
-        width: 23rem;
+        height: 14rem;
+        width: 18rem;
     }
-    @media screen and (min-width: 1800px){
+
+
+
+    @media screen and (min-width: 1580px){
         .carte {
-            margin: 2rem 20rem;
+            margin:6rem 18rem 2rem 18rem;
         }
     }
 
