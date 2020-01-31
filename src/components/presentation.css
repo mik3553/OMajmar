@@ -53,7 +53,7 @@ height: 13.8rem;
 
     margin: 0  1rem; 
 
-    border: red solid 2px;
+    /* border: red solid 2px; */
 
 }
 
@@ -62,7 +62,7 @@ height: 13.8rem;
 
     .presentation {
         padding-top: 1rem; 
-        height: 92vh;
+        height: 75vh;
        
         font-family: sans-serif;
     
@@ -130,7 +130,7 @@ height: 13.8rem;
         display: flex;
 
         padding-top: 1rem; 
-        height: 72.1vh;
+        height: 69vh;
        
         font-family: sans-serif;
     

@@ -28,6 +28,7 @@ export default class Presentation extends Component {
 
                 <article className="presentation-text">
 
+                  
 
                         <p>
                             Derrière O'Majmar, il y a Camélia, une entrepreneure qui se donne pour mission de valoriser la cuisine marocaine traditionnelle et familiale.

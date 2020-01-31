@@ -16,7 +16,7 @@ export default class Partenaires extends Component {
             <Fragment >
                 <div className="partenaire-container">
                 
-                    <p >Ils nous ont  fait confiance:</p>
+                    <p >Ils nous ont  fait confiance :</p>
                     
                     <div className="logo-partenaire">
                     

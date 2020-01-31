@@ -27,32 +27,45 @@ export default class PageAccueil extends Component {
                         />
                     </div>
                     <div className="control-content">
-                             <p>
+
+                            <h2 >
+                               Osez le voyage culinaire
+                            </h2>
+                            
+                            <br/>
+                            
+                            <p>
                                  
-                                  <span>" </span>O’Majmar vous invite à goûter à l’authenticité d’une cuisine familiale et traditionnelle en mettant en avant nos valeurs de partage, de convivialité pour déguster un plat typique du Maroc. <span> "</span>
-
+                                 O’Majmar vous invite à goûter à l’authenticité d’une cuisine familiale et traditionnelle en mettant en avant nos valeurs de partage, de convivialité pour déguster un plat typique du Maroc. 
                             </p>
 
                             <p>
-                            Dans une démarche éco responsable nous travaillons exclusivement avec des produits frais et privilégions les récoltes de saison. Nous utilisons des packagings recyclables et/ou compostables ou durables. 
+                            Dans une démarche éco responsable nous travaillons exclusivement avec des produits frais et privilégions les récoltes de saison. <br/> Nous utilisons des packagings recyclables et/ou compostables ou durables. 
                             </p>
 
                             <p>
-                            Afin d’éviter le gaspillage alimentaire et pour vous garantir une cuisine maison de qualité, nous vous demandons de bien vouloir passer commande 48h à l’avance avec un minimum de 5 personnes par commande. Au-delà de 30 personnes le délai s’étendra à 72h. <Link to={"/presentation"}> <span style={{ cursor: "pointer", fontSize: "1rem" }} >  En savoir plus  </span></Link> 
+                            Afin d’éviter le gaspillage alimentaire et pour vous garantir une cuisine maison de qualité, nous vous demandons de bien vouloir passer commande 48h à l’avance avec un minimum de 5 personnes par commande. Au-delà de 30 personnes le délai s’étendra à 72h. 
                             </p>
-                       
+                            <Link to={"/presentation"}> <span style={{ cursor: "pointer", fontSize: "1rem" }} >   En savoir plus  </span></Link> 
+
+
+                            <i class="fas fa-chevron-down"></i>
 
                     </div>
 
+                    <h2>Titre blabla du truc en bas</h2>
+
                     <div className="users-command container">
+
+                        
                         <div className="particulier-container">
                             <button className="btn-particulier btn-control btn" type="submit">
-                                <Link to="/menus" style={{ textDecoration: "none", color: "whitesmoke" }}> PARTICULIER ?</Link>
+                                <Link to="/menus" style={{ textDecoration: "none", color: "whitesmoke" }}> PARTICULIERS </Link>
                             </button>
                             <p>Passez un bon moment en dégustant des petits plats maison en famille, entre amis ou collègues. </p>
                             
                             <br/>
-                            <p>Pour assurer une qualité de travail, veillez prévoir 48h d’avance pour passer commande.   </p>
+                            <p>Pour assurer une qualité de travail, veuillez prévoir 48h d’avance pour passer commande.   </p>
 
                         </div>
 
@@ -60,15 +73,15 @@ export default class PageAccueil extends Component {
 
                         <div className="espacePro-container">
                             <button className="btn-entreprise btn-control btn" type="submit">
-                                <Link to={"/evenements"} style={{ textDecoration: "none", color: "whitesmoke" }}> ÉVÈNEMENTS ?</Link>
+                                <Link to={"/evenements"} style={{ textDecoration: "none", color: "whitesmoke" }}> ORGANISATIONS </Link>
                             </button>
                             <p>  Profitez d'un moment de convivialité avec vos collaborateurs grâce à un voyage culinaire pour vos buffets, déjeuners d’affaires...
                                 <Link to={"/devis"}><span className="lien-devis"><br/> Demandez un devis !</span></Link>
                             </p>
                             <br/>
                             
-                            <p>
-                            Pour assurer une qualité de travail, veillez prévoir 72h d’avance pour passer commande. 
+                            <p >
+                            Pour assurer une qualité de travail, veuillez prévoir 72h d’avance pour passer commande. 
                             </p>
                         
                         </div>
