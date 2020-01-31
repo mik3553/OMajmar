@@ -98,7 +98,7 @@ export default class Admin extends Component {
     }
     
     render() {
-        if (!this.state.isAdmin){
+        if (this.state.isAdmin){
             return  <section className='adminLogIn'>
                         <LoginForm 
                             isAuthenticated={()=>this.getAuthenticated()}/>

@@ -30,6 +30,7 @@ class Mignardise extends Component {
         const settings = {
             dots: true,
             infinite: true,
+            autoplay: true,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -59,7 +60,7 @@ class Mignardise extends Component {
                                         <figcaption className="figcaption-name">{mignardise.name}</figcaption>
                                     </figure>
                                     <div className='slider-description'>
-                                        {mignardises.description}
+                                        {mignardise.description}
                                     </div>
                                 </div>
                             )
@@ -67,9 +68,7 @@ class Mignardise extends Component {
                         )
                     }
                 </Slider>
-                <div className='slider-description-maxwidth'>
-                    {mignardises.description}
-                </div>
+
 
             </div>
         );

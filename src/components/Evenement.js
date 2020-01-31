@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './Evenement.css'
 
-
 import Header from './Header'
 import Footer from './Footer'
 import Mignardise from '../evenement/Mignardise';
@@ -20,15 +19,18 @@ export default class Evenement extends Component {
             <Fragment>
                 <Header />
                 <section className='evenements'>
-                    <h2>événements</h2>
+                    <h2>Événements</h2>
                     <article>
                         <div className='slider'>
+                            <h3>Mignardises</h3>
                             <Mignardise />
                         </div>
                         <div className='slider'>
+                            <h3>Repas</h3>
                             <Repa />
                         </div>
                         <div className='slider'>
+                            <h3>Gourmandise</h3>
                             <Gourmandise />
                         </div>
                     </article>
