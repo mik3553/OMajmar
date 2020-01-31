@@ -35,7 +35,6 @@ export default class PageAccueil extends Component {
                             <br/>
                             
                             <p>
-                                 
                                  O’Majmar vous invite à goûter à l’authenticité d’une cuisine familiale et traditionnelle en mettant en avant nos valeurs de partage, de convivialité pour déguster un plat typique du Maroc. 
                             </p>
 
